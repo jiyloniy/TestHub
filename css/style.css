@@ -523,6 +523,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    perspective: 1200px;
+    position: relative;
+    overflow: hidden;
 }
 
 .question-card {
@@ -531,9 +534,64 @@ body {
     border-radius: var(--radius-lg);
     padding: 20px;
     margin-bottom: 16px;
-    transition: opacity var(--transition), transform var(--transition);
+    transform-origin: center center;
+    will-change: transform, opacity;
 }
 
+/* 3D Slide out to left */
+.question-card.slide-out-left,
+.options-list.slide-out-left {
+    animation: slideOutLeft3D 0.28s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes slideOutLeft3D {
+    0% {
+        transform: translateX(0) scale(1) rotateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50px) scale(0.92) rotateY(-8deg);
+        opacity: 0;
+    }
+}
+
+/* 3D Slide in from right with spring */
+.question-card.slide-in-right {
+    animation: slideInRight3D 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.options-list.slide-in-right {
+    animation: slideInRight3D 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideInRight3D {
+    0% {
+        transform: translateX(60px) scale(0.92) rotateY(5deg);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) scale(1) rotateY(0);
+        opacity: 1;
+    }
+}
+
+/* Staggered option entrance */
+.option-btn.option-stagger {
+    animation: optionPopIn 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes optionPopIn {
+    0% {
+        transform: translateY(18px) scale(0.92);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Legacy fallback */
 .question-card.fade-out {
     opacity: 0;
     transform: translateX(-20px);
@@ -640,7 +698,9 @@ body {
     flex-direction: column;
     gap: 10px;
     margin-bottom: 16px;
-    transition: opacity var(--transition), transform var(--transition);
+    position: relative;
+    transform-origin: center center;
+    will-change: transform, opacity;
 }
 
 .options-list.fade-out {
@@ -701,6 +761,13 @@ body {
 .option-btn.selected-correct {
     background: var(--correct-bg);
     border-color: var(--correct-border);
+    animation: correctPulseGlow 0.6s ease;
+}
+
+@keyframes correctPulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+    50% { box-shadow: 0 0 0 12px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
 }
 
 .option-btn.selected-correct .option-key {
@@ -809,6 +876,115 @@ body {
 
 .auto-advance-fill.animating {
     transition: width linear;
+}
+
+/* ============================================
+   CREATIVE EFFECTS (Python Quiz)
+   ============================================ */
+
+/* Correct flash overlay */
+.quiz-body.correct-flash::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(34, 197, 94, 0.14), transparent 65%);
+    pointer-events: none;
+    z-index: 50;
+    animation: flashOverlay 0.8s ease-out forwards;
+}
+
+/* Wrong flash overlay */
+.quiz-body.wrong-flash::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(239, 68, 68, 0.12), transparent 65%);
+    pointer-events: none;
+    z-index: 50;
+    animation: flashOverlay 0.8s ease-out forwards;
+}
+
+@keyframes flashOverlay {
+    0% { opacity: 0; transform: scale(0.7); }
+    25% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.15); }
+}
+
+/* Floating result indicator */
+.floating-indicator {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 900;
+    pointer-events: none;
+    z-index: 40;
+    animation: floatUpFade 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.fi-icon {
+    font-size: 32px;
+    line-height: 1;
+}
+
+.fi-text {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.fi-correct {
+    color: var(--correct);
+    text-shadow: 0 0 24px rgba(34, 197, 94, 0.6), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.fi-wrong {
+    color: var(--wrong);
+    text-shadow: 0 0 24px rgba(239, 68, 68, 0.6), 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.fi-skip {
+    color: var(--text-muted);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+@keyframes floatUpFade {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -30%) scale(0.4);
+    }
+    25% {
+        opacity: 1;
+        transform: translate(-50%, -60%) scale(1.15);
+    }
+    60% {
+        opacity: 0.9;
+        transform: translate(-50%, -100%) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -160%) scale(0.7);
+    }
+}
+
+/* Counter bounce animation */
+.num-bounce {
+    display: inline-block;
+    animation: numBounce 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes numBounce {
+    0% { transform: scale(1); }
+    40% { transform: scale(1.5); color: var(--accent-python-light); }
+    100% { transform: scale(1); }
+}
+
+/* Enhanced progress bar glow */
+.python-fill {
+    position: relative;
+    box-shadow: 0 0 10px rgba(124, 58, 237, 0.5), 0 0 4px rgba(124, 58, 237, 0.3);
 }
 
 /* ============================================

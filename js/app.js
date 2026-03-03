@@ -32,8 +32,8 @@ let databaseData = null;
 const QUESTIONS_COUNT = 30;
 const PYTHON_TIME_LIMIT = 300; // seconds
 const DB_QUESTION_TIME = 5; // seconds
-const CORRECT_DELAY = 3000; // ms
-const WRONG_DELAY = 4000; // ms
+const CORRECT_DELAY = 1000; // ms
+const WRONG_DELAY = 1500; // ms
 
 // Circle circumference for timer ring (r=52)
 const RING_CIRCUMFERENCE = 2 * Math.PI * 52; // ≈ 326.73
@@ -121,20 +121,25 @@ function showPythonQuestion() {
 
     state.isAnswered = false;
 
-    // Update counter
-    document.getElementById('python-current').textContent = state.currentIndex + 1;
+    // Update counter with bounce
+    const currentEl = document.getElementById('python-current');
+    currentEl.textContent = state.currentIndex + 1;
+    currentEl.classList.add('num-bounce');
+    setTimeout(() => currentEl.classList.remove('num-bounce'), 500);
 
     // Update progress
     const pct = ((state.currentIndex) / QUESTIONS_COUNT) * 100;
     document.getElementById('python-progress').style.width = pct + '%';
 
-    // Question card
+    // Question card & options
     const card = document.getElementById('python-question-card');
     const optionsList = document.getElementById('python-options');
 
-    // Animate out
-    card.classList.add('fade-out');
-    optionsList.classList.add('fade-out');
+    // Slide out
+    card.classList.remove('slide-in-right', 'fade-in');
+    optionsList.classList.remove('slide-in-right', 'fade-in');
+    card.classList.add('slide-out-left');
+    optionsList.classList.add('slide-out-left');
 
     setTimeout(() => {
         // Update content
@@ -151,14 +156,15 @@ function showPythonQuestion() {
             codeWrap.classList.remove('visible');
         }
 
-        // Options
+        // Options with staggered entrance
         optionsList.innerHTML = '';
         const keys = ['A', 'B', 'C', 'D'];
-        keys.forEach(key => {
+        keys.forEach((key, idx) => {
             if (q.options[key]) {
                 const btn = document.createElement('button');
-                btn.className = 'option-btn';
+                btn.className = 'option-btn option-stagger';
                 btn.dataset.key = key;
+                btn.style.animationDelay = `${idx * 70}ms`;
                 btn.innerHTML = `
                     <span class="option-key">${key}</span>
                     <span class="option-text">${escapeHtml(q.options[key])}</span>
@@ -171,17 +177,17 @@ function showPythonQuestion() {
         // Show skip button
         document.getElementById('btn-skip').classList.remove('hidden');
 
-        // Animate in
-        card.classList.remove('fade-out');
-        card.classList.add('fade-in');
-        optionsList.classList.remove('fade-out');
-        optionsList.classList.add('fade-in');
+        // Slide in
+        card.classList.remove('slide-out-left');
+        card.classList.add('slide-in-right');
+        optionsList.classList.remove('slide-out-left');
+        optionsList.classList.add('slide-in-right');
 
         setTimeout(() => {
-            card.classList.remove('fade-in');
-            optionsList.classList.remove('fade-in');
-        }, 400);
-    }, 150);
+            card.classList.remove('slide-in-right');
+            optionsList.classList.remove('slide-in-right');
+        }, 550);
+    }, 280);
 }
 
 function selectOption(key) {
@@ -191,6 +197,7 @@ function selectOption(key) {
     const q = state.questions[state.currentIndex];
     const isCorrect = key === q.correctAnswer;
     const buttons = document.querySelectorAll('#python-options .option-btn');
+    const quizBody = document.querySelector('#python-screen .quiz-body');
 
     // Hide skip
     document.getElementById('btn-skip').classList.add('hidden');
@@ -208,6 +215,14 @@ function selectOption(key) {
             btn.classList.add('disabled');
         }
     });
+
+    // Flash overlay effect
+    const flashClass = isCorrect ? 'correct-flash' : 'wrong-flash';
+    quizBody.classList.add(flashClass);
+    setTimeout(() => quizBody.classList.remove(flashClass), 800);
+
+    // Floating result indicator
+    showFloatingIndicator(isCorrect);
 
     // Update score
     if (isCorrect) {
@@ -227,13 +242,9 @@ function selectOption(key) {
         isCorrect: isCorrect
     });
 
-    // Auto-advance bar
+    // Quick advance
     const advanceTime = isCorrect ? CORRECT_DELAY : WRONG_DELAY;
-    showAutoAdvanceBar(isCorrect, advanceTime);
-
-    // Auto advance
     state.autoAdvanceTimeout = setTimeout(() => {
-        hideAutoAdvanceBar();
         state.currentIndex++;
         if (state.currentIndex >= QUESTIONS_COUNT) {
             endPythonQuiz();
@@ -259,12 +270,38 @@ function skipQuestion() {
         skipped: true
     });
 
+    // Show skip flash
+    showFloatingIndicator('skip');
+
     state.currentIndex++;
     if (state.currentIndex >= QUESTIONS_COUNT) {
         endPythonQuiz();
     } else {
         showPythonQuestion();
     }
+}
+
+function showFloatingIndicator(type) {
+    const container = document.getElementById('python-options');
+    if (!container) return;
+
+    const indicator = document.createElement('div');
+    indicator.className = 'floating-indicator';
+
+    if (type === true) {
+        indicator.classList.add('fi-correct');
+        indicator.innerHTML = '<span class="fi-icon">✓</span><span class="fi-text">+1</span>';
+    } else if (type === false) {
+        indicator.classList.add('fi-wrong');
+        indicator.innerHTML = '<span class="fi-icon">✗</span>';
+    } else {
+        indicator.classList.add('fi-skip');
+        indicator.innerHTML = '<span class="fi-icon">→</span>';
+    }
+
+    container.style.position = 'relative';
+    container.appendChild(indicator);
+    setTimeout(() => indicator.remove(), 1000);
 }
 
 function showAutoAdvanceBar(isCorrect, duration) {
@@ -327,8 +364,10 @@ function updatePythonTimerDisplay() {
 function endPythonQuiz() {
     clearInterval(state.pythonTimerInterval);
     clearTimeout(state.autoAdvanceTimeout);
-    hideAutoAdvanceBar();
     document.getElementById('python-timer').classList.remove('urgent');
+    // Clean up flash effects
+    const quizBody = document.querySelector('#python-screen .quiz-body');
+    if (quizBody) quizBody.classList.remove('correct-flash', 'wrong-flash');
 
     // Fill remaining unanswered questions as skipped
     // Use answers.length to avoid double-counting if timer expired mid-advance
@@ -679,8 +718,12 @@ function cleanup() {
     clearInterval(state.pythonTimerInterval);
     clearInterval(state.dbTimerInterval);
     clearTimeout(state.autoAdvanceTimeout);
-    hideAutoAdvanceBar();
     document.getElementById('python-timer').classList.remove('urgent');
+    // Clean up any flash classes
+    const quizBody = document.querySelector('#python-screen .quiz-body');
+    if (quizBody) {
+        quizBody.classList.remove('correct-flash', 'wrong-flash');
+    }
 }
 
 // ============================================
