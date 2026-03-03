@@ -1,0 +1,609 @@
+{
+  "title": "Ma'lumotlar bazasi fanidan savollar to'plami",
+  "description": "Database (Ma'lumotlar bazasi) bo'yicha 100 ta savol va batafsil javoblar",
+  "totalQuestions": 100,
+  "category": "Database",
+  "type": "theory",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Ma'lumotlar bazasi nima?",
+      "answer": "Ma'lumotlar bazasi - bu ma'lumotlarni tizimli ravishda saqlash va boshqarish uchun mo'ljallangan tizimdir. U turli xil ma'lumotlarni, masalan, matn, raqamlar va sanalarni o'z ichiga olishi mumkin. Ma'lumotlar bazalari foydalanuvchilarga ma'lumotlarni tez va samarali qidirish imkonini beradi. Ular ko'pincha biznes, ilmiy tadqiqotlar va boshqa sohalarda keng qo'llaniladi.",
+      "keywords": ["ma'lumotlar bazasi", "tizimli saqlash", "boshqarish", "qidirish"]
+    },
+    {
+      "id": 2,
+      "question": "DBMS nima?",
+      "answer": "Ma'lumotlar bazasini boshqaruv tizimi (DBMS) - bu ma'lumotlar bazalarini yaratish, saqlash va boshqarish uchun dasturiy ta'minotdir. U foydalanuvchilarga ma'lumotlarni kiritish, yangilash, o'chirish va qidirish imkonini beradi. DBMS ma'lumotlar bazasining integritetini va xavfsizligini ta'minlaydi. Shuningdek, u ko'p foydalanuvchilar bir vaqtning o'zida ma'lumotlar bilan ishlashiga imkon beradi.",
+      "keywords": ["DBMS", "boshqaruv tizimi", "integritet", "xavfsizlik", "ko'p foydalanuvchi"]
+    },
+    {
+      "id": 3,
+      "question": "Relatsion ma'lumotlar bazasi nima?",
+      "answer": "Relatsion ma'lumotlar bazasi - bu ma'lumotlar bir-biri bilan bog'liq bo'lgan jadvallar ko'rinishida saqlanadigan ma'lumotlar bazasi turidir. Har bir jadval qatorlar va ustunlardan iborat bo'lib, ma'lumotlarni tartibga solish va boshqarish imkonini beradi. Relatsion ma'lumotlar bazalari SQL (Structured Query Language) yordamida boshqariladi. Ular ko'plab zamonaviy ilovalarda keng qo'llaniladi.",
+      "keywords": ["relatsion", "jadval", "SQL", "qatorlar", "ustunlar"]
+    },
+    {
+      "id": 4,
+      "question": "SQL nima?",
+      "answer": "SQL (Structured Query Language) - bu ma'lumotlar bazalarini boshqarish va ulardan ma'lumotlarni olish uchun ishlatiladigan standart dasturlash tilidir. SQL yordamida foydalanuvchilar ma'lumotlarni kiritish, yangilash, o'chirish va qidirish imkoniyatiga ega. Bu til relatsion ma'lumotlar bazalarida keng tarqalgan bo'lib, uning ko'plab variantlari mavjud. SQL dasturchilar va ma'lumotlar bazasi administratorlari uchun muhim vositadir.",
+      "keywords": ["SQL", "Structured Query Language", "standart til", "so'rovlar"]
+    },
+    {
+      "id": 5,
+      "question": "Indeks nima?",
+      "answer": "Indeks - bu ma'lumotlar bazasidagi ma'lumotlarni tezkor topish uchun ishlatiladigan ma'lumotlar strukturasi. Indeks ma'lumotlar bazasidagi jadvalning ustunlariga asoslanib quriladi va so'rovlar bajarilayotganda ma'lumotlarga tezkor kirishni ta'minlaydi. Indeks yaratish ma'lumotlarni o'qish tezligini oshirsa-da, ma'lumotlarni kiritish yoki yangilash operatsiyalarini sekinlashtirishi mumkin. Indekslar asosan qidiruvlar uchun ishlatiladi.",
+      "keywords": ["indeks", "tezkor qidirish", "optimizatsiya", "ma'lumotlar strukturasi"]
+    },
+    {
+      "id": 6,
+      "question": "Tranzaksiya nima?",
+      "answer": "Tranzaksiya - bu bir nechta ma'lumotlar bazasidagi operatsiyalarni birgalikda amalga oshirish jarayonidir. Tranzaksiya bir necha operatsiyani yagona bir blok sifatida bajarishga imkon beradi. Tranzaksiyaning asosiy xususiyatlari ACID (Atomicity, Consistency, Isolation, Durability) prinsiplari bilan ta'minlanadi. Bu prinsiplarga rioya qilish, ma'lumotlar bazasining yaxlitligini va ishonchliligini ta'minlaydi.",
+      "keywords": ["tranzaksiya", "ACID", "atomiclik", "yaxlitlik", "izolyatsiya"]
+    },
+    {
+      "id": 7,
+      "question": "Foreign Key nima?",
+      "answer": "Foreign Key (chet kalit) - bu bir jadvaldagi ustun, boshqa jadvaldagi biror ustunga ishora qiladigan kalitdir. Foreign Key ma'lumotlar bazasida jadvallar o'rtasidagi bog'lanishni ta'minlaydi. Bu bog'lanish ma'lumotlar bazasidagi yaxlitlikni saqlashga yordam beradi. Misol uchun, \"Buyurtma\" jadvalidagi \"Mijoz_ID\" ustuni \"Mijoz\" jadvalidagi \"ID\" ustuniga bog'lanishi mumkin.",
+      "keywords": ["Foreign Key", "chet kalit", "bog'lanish", "referensial yaxlitlik"]
+    },
+    {
+      "id": 8,
+      "question": "Primary Key nima?",
+      "answer": "Primary Key (asosiy kalit) - bu jadvaldagi har bir qatorni noyob tarzda identifikatsiya qilish uchun ishlatiladigan ustundir. Primary Key ustunidagi qiymatlar har doim noyob bo'lishi kerak, ya'ni ikki marta bir xil qiymat bo'lishi mumkin emas. Bu kalit ma'lumotlar bazasining yaxlitligini ta'minlashda muhim rol o'ynaydi. Primary Key ustuni bo'sh (NULL) qiymatlarni qabul qilmaydi.",
+      "keywords": ["Primary Key", "asosiy kalit", "noyob", "identifikatsiya", "NULL emas"]
+    },
+    {
+      "id": 9,
+      "question": "Ma'lumotlar bazasida bog'lanish turlari qanday?",
+      "answer": "Ma'lumotlar bazasida uchta asosiy bog'lanish turi mavjud: bir-biriga bir (one-to-one), bir-biriga ko'p (one-to-many), va ko'p-biriga ko'p (many-to-many). Bir-biriga bir bog'lanish: Har bir qator faqat bitta boshqa qator bilan bog'liq bo'ladi. Bir-biriga ko'p bog'lanish: Bir qator boshqa bir necha qator bilan bog'liq bo'ladi. Ko'p-biriga ko'p bog'lanish: Bir qator bir necha boshqa qatorlar bilan bog'lanishi mumkin va aksincha.",
+      "keywords": ["bog'lanish turlari", "one-to-one", "one-to-many", "many-to-many"]
+    },
+    {
+      "id": 10,
+      "question": "Jadvallar orasidagi bog'lanishlar qanday ta'minlanadi?",
+      "answer": "Jadvallar orasidagi bog'lanishlar odatda asosiy kalit (primary key) va chet kalit (foreign key) yordamida ta'minlanadi. Masalan, \"Buyurtmalar\" jadvalida \"Mijoz_ID\" ustuni \"Mijozlar\" jadvalidagi \"ID\" ustuniga chet kalit sifatida bog'lanishi mumkin. Bu bog'lanishlar ma'lumotlar bazasining yaxlitligini ta'minlashda va so'rovlarni soddalashtirishda muhim ahamiyatga ega.",
+      "keywords": ["bog'lanish", "primary key", "foreign key", "referensial yaxlitlik"]
+    },
+    {
+      "id": 11,
+      "question": "Ma'lumotlar bazasining xavfsizligini qanday ta'minlash mumkin?",
+      "answer": "Ma'lumotlar bazasining xavfsizligini ta'minlash uchun bir nechta usullar mavjud: Foydalanuvchi autentifikatsiyasi - Foydalanuvchi tizimga kirishdan oldin identifikatsiyadan o'tishi kerak. Avtorizatsiya - Foydalanuvchining tizimdagi huquqlari va ruxsatlari aniq belgilanishi kerak. Kriptografiya - Ma'lumotlarni kodlash orqali ma'lumotlarning maxfiyligini saqlash mumkin. Birinchi darajali xavfsizlik choralarini amalga oshirish - Tizimda noto'g'ri kirishlardan himoyalanish uchun xavfsizlik devorlari va boshqa vositalardan foydalanish.",
+      "keywords": ["xavfsizlik", "autentifikatsiya", "avtorizatsiya", "kriptografiya", "shifrlash"]
+    },
+    {
+      "id": 12,
+      "question": "Ma'lumotlar bazasidagi \"NULL\" qiymati nima?",
+      "answer": "\"NULL\" qiymati ma'lumotlar bazasida bo'sh yoki noma'lum qiymatni anglatadi. Bu qiymat ma'lum bir ustunda ma'lumot mavjud emasligini yoki berilmaganligini bildiradi. \"NULL\" qiymati 0 yoki bo'sh string bilan aralashtirilmasligi kerak, chunki ular boshqa ma'lumotlardir. \"NULL\" qiymatiga ega ustunlar maxsus sinovlardan (masalan, IS NULL yoki IS NOT NULL) o'tkazilishi kerak.",
+      "keywords": ["NULL", "bo'sh qiymat", "noma'lum", "IS NULL", "IS NOT NULL"]
+    },
+    {
+      "id": 13,
+      "question": "Jadvalda indeks yaratishning foydalari nimalar?",
+      "answer": "Jadvalda indeks yaratish ma'lumotlarni qidirish jarayonini tezlashtiradi. Indekslar qidiruv so'rovlarini optimallashtirishga yordam beradi va ma'lumotlar bazasining samaradorligini oshiradi. Biroq, indekslar yaratish ma'lumotlarni kiritish yoki yangilash vaqtini sekinlashtirishi mumkin, chunki har safar ma'lumotlar o'zgarganda indekslar yangilanadi. Shu sababli, indekslarni faqat kerakli ustunlarda yaratish kerak.",
+      "keywords": ["indeks", "qidiruv tezligi", "optimizatsiya", "samaradorlik"]
+    },
+    {
+      "id": 14,
+      "question": "Ma'lumotlar bazasida \"join\" operatori nima?",
+      "answer": "\"Join\" operatori - bu SQL so'rovlarida bir nechta jadvallardan ma'lumotlarni birlashtirish uchun ishlatiladi. Asosiy \"join\" turlari: Inner Join - Faqat ikkala jadvalda ham mos keladigan qatorlarni qaytaradi. Left Join - Birinchi jadvaldagi barcha qatorlarni va ikkinchi jadvalda mos keladigan qatorlarni qaytaradi. Right Join - Ikkinchi jadvaldagi barcha qatorlarni va birinchi jadvaldagi mos keladigan qatorlarni qaytaradi. Full Join - Ikkala jadvaldagi barcha qatorlarni qaytaradi.",
+      "keywords": ["join", "birlashtirish", "INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"]
+    },
+    {
+      "id": 15,
+      "question": "Ma'lumotlar bazasida \"Aggregation\" (agregat) funktsiyalari nima?",
+      "answer": "Aggregation funktsiyalari - bu ma'lumotlar bazasidagi ma'lumotlarni umumlashtirish yoki tahlil qilish uchun ishlatiladigan funktsiyalar. Eng keng tarqalgan agregat funktsiyalari: COUNT - Jadvaldagi qatorlar sonini hisoblash. SUM - Belgilangan ustundagi barcha qiymatlarni qo'shish. AVG - Belgilangan ustundagi qiymatlarning o'rtacha qiymatini hisoblash. MIN - Eng kichik qiymatni olish. MAX - Eng katta qiymatni olish.",
+      "keywords": ["agregat funktsiyalari", "COUNT", "SUM", "AVG", "MIN", "MAX"]
+    },
+    {
+      "id": 16,
+      "question": "Ma'lumotlar bazasida \"union\" operatori nima?",
+      "answer": "\"Union\" operatori SQL so'rovlarida ikki yoki undan ortiq SELECT so'rovining natijalarini birlashtirish uchun ishlatiladi. \"Union\" operatori faqat bir xil ustunlar soniga ega bo'lgan jadvallardan ma'lumotlarni birlashtiradi. \"Union\" yordamida bir nechta so'rov natijalarini yagona natijaga birlashtirish mumkin. \"Union all\" operatori esa, takrorlangan qatorlarni qaytarishga imkon beradi.",
+      "keywords": ["UNION", "birlashtirish", "UNION ALL", "takroriy qatorlar"]
+    },
+    {
+      "id": 17,
+      "question": "Cross Join nima?",
+      "answer": "Cross Join - bu ikki jadvaldagi barcha mumkin bo'lgan kombinatsiyalarni qaytaruvchi SQL so'rovidir. Masalan, birinchi jadvalda 3 qator va ikkinchi jadvalda 4 qator bo'lsa, cross join 3 * 4 = 12 ta qatorni qaytaradi. Bu turdagi so'rovlar ma'lum bir maqsad uchun, masalan, barcha imkoniyatlarni tahlil qilishda foydalidir, ammo katta hajmdagi jadvallar uchun samarali bo'lmasligi mumkin.",
+      "keywords": ["CROSS JOIN", "kartezian ko'paytma", "kombinatsiyalar"]
+    },
+    {
+      "id": 18,
+      "question": "MySQL'da \"SELECT\" so'rovi qanday ishlaydi?",
+      "answer": "SELECT so'rovi MySQL'ning asosiy operatsiyalaridan biridir va ma'lumotlar bazasidan ma'lumotlarni tanlash uchun ishlatiladi. Bu so'rovda kerakli ustunlar va jadval nomi ko'rsatiladi. So'rov bajarilganda, ma'lumotlar bazasi kerakli yozuvlarni qaytaradi. SELECT so'roviga turli filtrlar, tartiblash va guruhlash operatorlari qo'shish mumkin.",
+      "keywords": ["SELECT", "tanlash", "so'rov", "ma'lumot olish"]
+    },
+    {
+      "id": 19,
+      "question": "\"INSERT INTO\" so'rovi nima va qanday ishlatiladi?",
+      "answer": "INSERT INTO so'rovi ma'lumotlar bazasiga yangi yozuvlarni qo'shish uchun ishlatiladi. Bu so'rovda jadval nomi va qo'shiladigan ma'lumotlar ko'rsatiladi. Agar barcha ustunlar bo'yicha ma'lumotlarni qo'shish kerak bo'lsa, ustunlar ro'yxatini yozish shart emas. \"INSERT INTO\" so'rovi ko'pincha foydalanuvchi ma'lumotlarini qo'shish uchun ishlatiladi.",
+      "keywords": ["INSERT INTO", "qo'shish", "yangi yozuv", "ma'lumot kiritish"]
+    },
+    {
+      "id": 20,
+      "question": "\"UPDATE\" so'rovi nima va qanday ishlatiladi?",
+      "answer": "UPDATE so'rovi jadvaldagi mavjud yozuvlarni yangilash uchun ishlatiladi. Bu so'rovda yangilanishi kerak bo'lgan ustunlar va yangi qiymatlar ko'rsatiladi. Shuningdek, qaysi yozuvlarni yangilash kerakligini aniqlash uchun WHERE operatoridan foydalanish zarur. Bu so'rov bazadagi ma'lumotlarni o'zgartirishga imkon beradi.",
+      "keywords": ["UPDATE", "yangilash", "o'zgartirish", "WHERE"]
+    },
+    {
+      "id": 21,
+      "question": "\"DELETE\" so'rovi qanday ishlaydi?",
+      "answer": "DELETE so'rovi jadvaldagi mavjud yozuvlarni o'chirish uchun ishlatiladi. So'rovda qaysi yozuvlar o'chirilishi kerakligini aniqlash uchun WHERE sharti qo'llaniladi. DELETE so'rovini ehtiyotkorlik bilan ishlatish kerak, chunki u o'chirilgan ma'lumotlarni qayta tiklash imkoniyatini bermaydi.",
+      "keywords": ["DELETE", "o'chirish", "WHERE", "ma'lumot o'chirish"]
+    },
+    {
+      "id": 22,
+      "question": "\"WHERE\" klauzasi nima va qanday ishlatiladi?",
+      "answer": "WHERE klauzasi SELECT, UPDATE, va DELETE kabi so'rovlarda ma'lumotlarni filtrlaydi. Bu klauza ma'lum bir shartga mos keladigan yozuvlarni tanlash, yangilash yoki o'chirish uchun ishlatiladi. WHERE klauzasi turli operatorlar bilan birga ishlatiladi, masalan, =, >, <, BETWEEN, va boshqalar.",
+      "keywords": ["WHERE", "filtr", "shart", "operatorlar"]
+    },
+    {
+      "id": 23,
+      "question": "\"AND\" va \"OR\" operatorlari qanday ishlaydi?",
+      "answer": "AND va OR operatorlari WHERE klauzasida bir nechta shartlarni birlashtirish uchun ishlatiladi. AND operatori barcha shartlar bajarilishi kerakligini bildiradi, ya'ni barcha shartlar to'g'ri bo'lsa, yozuv tanlanadi. OR operatori esa kamida bitta shart bajarilganida yozuvni tanlash imkonini beradi.",
+      "keywords": ["AND", "OR", "mantiqiy operatorlar", "shartlar"]
+    },
+    {
+      "id": 24,
+      "question": "\"GROUP BY\", \"HAVING\", \"ORDER BY\" klauzlari nima vazifani bajaradi?",
+      "answer": "GROUP BY klauzasi ma'lumotlarni guruhlash uchun ishlatiladi va agregat funksiyalar bilan ishlatiladi. ORDER BY klauzasi natijalarni tartiblash uchun ishlatiladi (ASC yoki DESC). HAVING klauzasi guruhlangan natijalarni filtrlash uchun ishlatiladi. LIMIT klauzasi natijalarni cheklash uchun ishlatiladi.",
+      "keywords": ["GROUP BY", "HAVING", "ORDER BY", "LIMIT", "guruhlash", "tartiblash"]
+    },
+    {
+      "id": 25,
+      "question": "MySQL'da \"SUM\", \"AVG\", \"MIN\" va \"MAX\" funksiyalari?",
+      "answer": "SUM funksiyasi ustundagi raqamli qiymatlarning yig'indisini hisoblaydi. AVG funksiyasi o'rtacha qiymatni hisoblaydi. MIN funksiyasi eng kichik qiymatni, MAX funksiyasi esa eng katta qiymatni qaytaradi. Bu funksiyalar statistik tahlil va hisob-kitoblar uchun foydalidir.",
+      "keywords": ["SUM", "AVG", "MIN", "MAX", "agregat funktsiyalar"]
+    },
+    {
+      "id": 26,
+      "question": "MySQL'da UNIQUE, PRIMARY KEY, FOREIGN KEY cheklovi nima?",
+      "answer": "UNIQUE cheklovi ustundagi qiymatlarning noyobligini ta'minlaydi. PRIMARY KEY cheklovi har bir yozuvni noyob ravishda identifikatsiya qiladi. FOREIGN KEY cheklovi boshqa jadvaldagi PRIMARY KEY ustuniga bog'lanadigan ustunlar uchun ishlatiladi va referensial yaxlitlikni saqlaydi.",
+      "keywords": ["UNIQUE", "PRIMARY KEY", "FOREIGN KEY", "cheklovlar", "constraints"]
+    },
+    {
+      "id": 27,
+      "question": "MySQL'da \"VIEW\" nima?",
+      "answer": "VIEW - bu bazadagi bir yoki bir nechta jadvallardan olingan ma'lumotlarning virtual jadvalidir. VIEW ma'lumotlarni ko'rish yoki tahlil qilishda qulaylik yaratadi. VIEW yaratish uchun SELECT so'rovi ishlatiladi va u faqat o'qish uchun mo'ljallangan.",
+      "keywords": ["VIEW", "virtual jadval", "ko'rinish", "SELECT"]
+    },
+    {
+      "id": 28,
+      "question": "MySQL'da \"INDEX\" nima va qanday ishlatiladi?",
+      "answer": "INDEX ma'lumotlarni tezkor qidirish uchun ishlatiladi. Bu jadvalda ma'lumotlarni tartiblangan holda saqlash va tezkor qidiruv imkonini beradi. INDEX yaratish so'rovlarning bajarilish tezligini oshiradi. Biroq, indekslar ma'lumotlarni qo'shish yoki yangilashni sekinlashtirishi mumkin.",
+      "keywords": ["INDEX", "indeks", "tezkor qidirish", "optimizatsiya"]
+    },
+    {
+      "id": 29,
+      "question": "MySQL'da \"EXPLAIN\" so'rovi nima?",
+      "answer": "EXPLAIN so'rovi SQL so'rovining bajarilish rejasini ko'rsatadi. Bu so'rovni bajarishdan oldin uning qanday optimallashtirilishini va resurslar qanday ishlatilishini bilib olish imkonini beradi. EXPLAIN yordamida so'rovning tezligini va samaradorligini baholash mumkin.",
+      "keywords": ["EXPLAIN", "bajarilish rejasi", "optimizatsiya", "tahlil"]
+    },
+    {
+      "id": 30,
+      "question": "MySQL'da \"LIMIT\" va \"OFFSET\" klauzalari qanday ishlaydi?",
+      "answer": "LIMIT klauzasi natijalar sonini cheklash uchun ishlatiladi. OFFSET esa natijalarning qaysi qatoridan boshlanishini belgilaydi. Masalan, LIMIT 10 OFFSET 20 so'rovi 20-qatordan boshlab 10 ta natija qaytaradi. Bu klauzalar sahifalash (pagination) uchun juda qulay.",
+      "keywords": ["LIMIT", "OFFSET", "sahifalash", "pagination", "cheklash"]
+    },
+    {
+      "id": 31,
+      "question": "MySQL'da \"SUBQUERY\" nima?",
+      "answer": "SUBQUERY - bu boshqa so'rov ichida ishlatiladigan so'rovdir. SUBQUERY natijalarini asosiy so'rovga argument sifatida uzatish mumkin. Bu so'rovlar ko'pincha WHERE, FROM, yoki SELECT klauzalarida ishlatiladi. Subquery yordamida kompleks so'rovlarni bajarish mumkin.",
+      "keywords": ["SUBQUERY", "ichki so'rov", "nested query", "kompleks so'rovlar"]
+    },
+    {
+      "id": 32,
+      "question": "MySQL'da \"IN\" operatori qanday ishlaydi?",
+      "answer": "IN operatori, ma'lum bir qiymatlar to'plamidan tanlash uchun ishlatiladi. Masalan, WHERE klauzasida IN operatori bir nechta qiymatni tekshirish imkonini beradi. Bu operatorni turli qiymatlarni filtrlashda ishlatish juda qulay.",
+      "keywords": ["IN", "qiymatlar to'plami", "filtr", "ko'p qiymatlar"]
+    },
+    {
+      "id": 33,
+      "question": "MySQL'da \"BETWEEN\" operatori qanday ishlatiladi?",
+      "answer": "BETWEEN operatori qiymatlarni belgilangan oraliqda tanlash uchun ishlatiladi. U ikki qiymat orasida tanlashni amalga oshiradi va har ikki qiymatni ham o'z ichiga oladi. Misol uchun, WHERE age BETWEEN 18 AND 30 so'rovi 18 va 30 orasidagi barcha qiymatlarni tanlaydi.",
+      "keywords": ["BETWEEN", "oraliq", "diapazon", "qiymat oralig'i"]
+    },
+    {
+      "id": 34,
+      "question": "MySQL'da \"LIKE\" operatori nima va qanday ishlatiladi?",
+      "answer": "LIKE operatori belgilangan naqshga mos yozuvlarni tanlash uchun ishlatiladi. Bu operator, asosan, matnli qiymatlarni qidirishda qo'llaniladi. LIKE operatori wildcards (% va _) bilan ishlaydi, % - bir nechta belgilarni, _ esa bitta belgini bildiradi.",
+      "keywords": ["LIKE", "naqsh", "wildcard", "pattern matching", "matn qidirish"]
+    },
+    {
+      "id": 35,
+      "question": "MySQL'da \"IS NULL\" operatori nima?",
+      "answer": "IS NULL operatori ma'lum bir ustundagi qiymatning NULL ekanligini tekshiradi. NULL qiymatlari bo'yicha filtrlashda IS NULL ishlatiladi, masalan, WHERE column_name IS NULL.",
+      "keywords": ["IS NULL", "NULL tekshirish", "bo'sh qiymat"]
+    },
+    {
+      "id": 36,
+      "question": "MySQL'da \"CASE\" ifodasi qanday ishlatiladi?",
+      "answer": "CASE ifodasi, SQL so'rovlarida shartli mantiqni qo'llash uchun ishlatiladi. Bu ifoda, agar biror shart bajarilsa, ma'lum bir qiymatni qaytaradi, aks holda boshqa qiymatni qaytaradi. CASE ifodasi ko'pincha SELECT, UPDATE, va DELETE so'rovlarida ishlatiladi.",
+      "keywords": ["CASE", "shartli mantiq", "if-else", "conditional"]
+    },
+    {
+      "id": 37,
+      "question": "MySQL'da \"COALESCE\" funksiyasi nima?",
+      "answer": "COALESCE funksiyasi NULL bo'lmagan birinchi qiymatni qaytaradi. Agar bir nechta ustunlar yoki ifodalar bo'lsa, COALESCE ularni tekshiradi va NULL bo'lmagan birinchi qiymatni tanlaydi. Bu funksiya NULL qiymatlar bilan ishlashda foydalidir.",
+      "keywords": ["COALESCE", "NULL handling", "birinchi qiymat"]
+    },
+    {
+      "id": 38,
+      "question": "MySQL'da \"GROUP_CONCAT\" funksiyasi nima?",
+      "answer": "GROUP_CONCAT funksiyasi guruhlangan yozuvlarni bitta satrda birlashtirish uchun ishlatiladi. Bu funksiya bir nechta qiymatlarni birlashtirib, ularni vergul bilan ajratilgan qator sifatida qaytaradi. Bu agregat funksiya ko'pincha guruhlangan ma'lumotlarni birlashtirishda qo'llaniladi.",
+      "keywords": ["GROUP_CONCAT", "birlashtirish", "agregat", "concatenation"]
+    },
+    {
+      "id": 39,
+      "question": "MySQL'da \"TRIM\" funksiyasi nima?",
+      "answer": "TRIM funksiyasi satrdagi boshidagi va oxiridagi bo'sh joylarni olib tashlash uchun ishlatiladi. Bu funksiya matnli ustunlar yoki satrlar bo'yicha qo'llaniladi. TRIM funksiyasi \"LEADING\", \"TRAILING\", va \"BOTH\" kabi opsiyalarni qo'llash orqali bo'sh joylarni aniq o'chirishi mumkin.",
+      "keywords": ["TRIM", "bo'sh joy olib tashlash", "string cleaning"]
+    },
+    {
+      "id": 40,
+      "question": "MySQL'da \"CONCAT\" funksiyasi nima?",
+      "answer": "CONCAT funksiyasi bir nechta satrni bitta satrga birlashtirish uchun ishlatiladi. Bu funksiya turli matnlarni birlashtirishda juda foydalidir. Agar biror ustunda NULL qiymat bo'lsa, CONCAT funksiyasi NULL qaytaradi, lekin CONCAT_WS funksiyasi bo'sh joy yoki maxsus ajratgich bilan buni qaytaradi.",
+      "keywords": ["CONCAT", "string birlashtirish", "concatenation"]
+    },
+    {
+      "id": 41,
+      "question": "MySQL'da \"NOW()\" funksiyasi nima?",
+      "answer": "NOW() funksiyasi joriy sanani va vaqtni olish uchun ishlatiladi. Bu funksiya, asosan, ma'lumotlar bazasiga vaqtni kiritish yoki vaqt bo'yicha so'rovlar qilish uchun ishlatiladi. NOW() funksiyasi millisekundlarga qadar aniq vaqtni qaytaradi.",
+      "keywords": ["NOW()", "joriy vaqt", "sana va vaqt", "timestamp"]
+    },
+    {
+      "id": 42,
+      "question": "MySQL'da \"DATE_FORMAT\" funksiyasi nima?",
+      "answer": "DATE_FORMAT funksiyasi sanani ma'lum bir formatda chiqarish uchun ishlatiladi. Masalan, sanani \"YYYY-MM-DD\" formatida yoki boshqa o'zingiz xohlagan formatda ko'rsatish mumkin. Bu funksiya ma'lumotlar bazasida vaqt va sanalarni o'qilishi qulay formatda ko'rsatishda qo'llaniladi.",
+      "keywords": ["DATE_FORMAT", "sana formatlash", "date formatting"]
+    },
+    {
+      "id": 43,
+      "question": "MySQL'da \"YEAR()\" funksiyasi nima?",
+      "answer": "YEAR() funksiyasi sanadan faqat yil qismini olish uchun ishlatiladi. Bu funksiya sanani tahlil qilishda, masalan, yil bo'yicha guruhlashda yoki saralashda foydalidir. YEAR() funksiyasi DATE yoki DATETIME formatidagi ustunlar bilan ishlaydi.",
+      "keywords": ["YEAR()", "yil", "sana funksiyasi"]
+    },
+    {
+      "id": 44,
+      "question": "MySQL'da \"MONTH()\" funksiyasi nima?",
+      "answer": "MONTH() funksiyasi sanadan faqat oy qismini olish uchun ishlatiladi. Bu funksiyani yilning qaysi oyida yuz bergan hodisalarni tahlil qilishda qo'llash mumkin. Masalan, SELECT MONTH(date_column) so'rovi ma'lum bir sananing oy qismini qaytaradi.",
+      "keywords": ["MONTH()", "oy", "sana funksiyasi"]
+    },
+    {
+      "id": 45,
+      "question": "MySQL'da \"DAY()\" funksiyasi nima?",
+      "answer": "DAY() funksiyasi sanadan faqat kun qismini olish uchun ishlatiladi. Bu funksiya ma'lum bir sana bilan ishlashda va vaqtni sananing kun qismida tahlil qilishda yordam beradi. DAY() funksiyasi uchun umumiy sintaksis: SELECT DAY(date_column).",
+      "keywords": ["DAY()", "kun", "sana funksiyasi"]
+    },
+    {
+      "id": 46,
+      "question": "MySQL'da \"TIMESTAMPDIFF()\" funksiyasi nima?",
+      "answer": "TIMESTAMPDIFF() funksiyasi ikki sana o'rtasidagi farqni hisoblash uchun ishlatiladi. Bu funksiya turli vaqt birligi (yil, oy, kun, soat, daqiqa, soniya) bo'yicha ikki sana o'rtasidagi farqni qaytaradi. Masalan, TIMESTAMPDIFF(DAY, start_date, end_date) so'rovi ikki sana orasidagi kunlar sonini qaytaradi.",
+      "keywords": ["TIMESTAMPDIFF()", "sana farqi", "vaqt farqi"]
+    },
+    {
+      "id": 47,
+      "question": "MySQL'da \"RAND()\" funksiyasi nima?",
+      "answer": "RAND() funksiyasi tasodifiy raqamni yaratadi. Bu funksiya 0 va 1 orasidagi tasodifiy sonni qaytaradi. RAND() ko'pincha tasodifiy tanlovlar qilish, masalan, foydalanuvchilarni yoki mahsulotlarni tasodifiy ravishda tanlashda qo'llaniladi.",
+      "keywords": ["RAND()", "tasodifiy", "random", "tasodifiy son"]
+    },
+    {
+      "id": 48,
+      "question": "MySQL'da \"FLOOR()\" funksiyasi nima?",
+      "answer": "FLOOR() funksiyasi sonni yaxlitlash uchun ishlatiladi, lekin yaxlitlash faqat kiritilgan sonning eng kichik butun soniga bajariladi. Masalan, FLOOR(3.7) 3 ni qaytaradi. Bu funksiya faqat sonlar bilan ishlaydi.",
+      "keywords": ["FLOOR()", "yaxlitlash", "pastga yaxlitlash"]
+    },
+    {
+      "id": 49,
+      "question": "MySQL'da \"CEIL()\" funksiyasi nima?",
+      "answer": "CEIL() funksiyasi sonni yuqoriga tomon yaxlitlaydi. Bu funksiya kiritilgan sonni eng yaqin butun songa yuqoriga qarab yaxlitlaydi. Masalan, CEIL(3.1) 4 ni qaytaradi.",
+      "keywords": ["CEIL()", "yaxlitlash", "yuqoriga yaxlitlash"]
+    },
+    {
+      "id": 50,
+      "question": "MySQL'da \"ROUND()\" funksiyasi nima?",
+      "answer": "ROUND() funksiyasi raqamni ma'lum bir joyga yaxlitlash uchun ishlatiladi. Bu funksiya foydalanuvchiga kiritilgan raqamni aniqlangan o'nlik raqamlar soniga yaxlitlash imkonini beradi. Masalan, ROUND(3.14159, 2) 3.14 ni qaytaradi.",
+      "keywords": ["ROUND()", "yaxlitlash", "matematik funksiya"]
+    },
+    {
+      "id": 51,
+      "question": "MySQL'da \"ABS()\" funksiyasi nima?",
+      "answer": "ABS() funksiyasi raqamning musbat qiymatini olish uchun ishlatiladi. Agar qiymat manfiy bo'lsa, ABS() uni musbatga aylantiradi. Masalan, ABS(-7) 7 ni qaytaradi. Bu funksiya tahlil va hisob-kitoblarda manfiy qiymatlardan qochish uchun ishlatiladi.",
+      "keywords": ["ABS()", "mutlaq qiymat", "absolute value"]
+    },
+    {
+      "id": 52,
+      "question": "MySQL'da \"IFNULL()\" funksiyasi nima?",
+      "answer": "IFNULL() funksiyasi NULL qiymatni boshqacha qiymatga almashtirish uchun ishlatiladi. Agar kiritilgan qiymat NULL bo'lsa, unda belgilangan ikkinchi qiymat qaytariladi. Masalan, IFNULL(NULL, 'No Data') so'rovi \"No Data\" ni qaytaradi.",
+      "keywords": ["IFNULL()", "NULL handling", "default qiymat"]
+    },
+    {
+      "id": 53,
+      "question": "MySQL'da \"NULLIF()\" funksiyasi nima?",
+      "answer": "NULLIF() funksiyasi ikkita qiymatni taqqoslaydi. Agar ular teng bo'lsa, NULL qaytariladi, aks holda birinchi qiymat qaytariladi. Bu funksiya odatda qiymatlarni tekshiruvdan o'tkazish va bir xil qiymatlar bo'lsa, NULL qaytarish uchun ishlatiladi.",
+      "keywords": ["NULLIF()", "NULL qaytarish", "taqqoslash"]
+    },
+    {
+      "id": 54,
+      "question": "MySQL'da \"EXCEPT\" operatori nima?",
+      "answer": "EXCEPT operatori, birinchi so'rovda mavjud bo'lib, ikkinchi so'rovda yo'q bo'lgan yozuvlarni tanlash uchun ishlatiladi. Bu operator MySQL'da qo'llanilmaydi, lekin boshqa ma'lumotlar bazasi tizimlarida mavjud. MySQL'da bu funktsiyani NOT IN yoki LEFT JOIN orqali amalga oshirish mumkin.",
+      "keywords": ["EXCEPT", "farq", "set difference"]
+    },
+    {
+      "id": 55,
+      "question": "MySQL'da \"INTERSECT\" operatori nima?",
+      "answer": "INTERSECT operatori ikki so'rovdagi umumiy yozuvlarni tanlash uchun ishlatiladi. Bu operator MySQL'da to'g'ridan-to'g'ri mavjud emas, lekin uni INNER JOIN yoki IN operatorlari bilan amalga oshirish mumkin. INTERSECT umumiy yozuvlarni olishda qo'llaniladi.",
+      "keywords": ["INTERSECT", "kesishma", "umumiy yozuvlar"]
+    },
+    {
+      "id": 56,
+      "question": "MySQL'da \"UNION\" operatori nima?",
+      "answer": "UNION operatori ikki yoki undan ortiq so'rovlarning natijalarini birlashtirish uchun ishlatiladi. Bu operator yordamida, takroriy yozuvlar olib tashlanadi va natijalar bitta ro'yxat sifatida qaytariladi. UNION ALL operatori esa takroriy yozuvlarni saqlab qoladi.",
+      "keywords": ["UNION", "birlashtirish", "UNION ALL", "set union"]
+    },
+    {
+      "id": 57,
+      "question": "MySQL'da \"EXPLAIN ANALYZE\" nima?",
+      "answer": "EXPLAIN ANALYZE so'rovi so'rovning bajarilish rejasini tekshirish va uni bajarish tezligini tahlil qilish uchun ishlatiladi. Bu MySQL 8.0 versiyasidan boshlab qo'shilgan funksiyadir va so'rovni bajarishda qanday reja va strategiya ishlatilishini ko'rsatadi.",
+      "keywords": ["EXPLAIN ANALYZE", "query analysis", "performance"]
+    },
+    {
+      "id": 58,
+      "question": "MySQL'da \"SELECT DISTINCT\" va \"SELECT\" o'rtasidagi farq nima?",
+      "answer": "SELECT DISTINCT operatori tanlangan ustunlardagi takroriy qiymatlarni olib tashlaydi, faqat noyob yozuvlarni qaytaradi. SELECT esa barcha yozuvlarni, shu jumladan takroriy yozuvlarni qaytaradi. DISTINCT operatori faqat takrorlanayotgan qiymatlar bilan ishlaydi.",
+      "keywords": ["SELECT DISTINCT", "noyob qiymatlar", "takroriy olib tashlash"]
+    },
+    {
+      "id": 59,
+      "question": "MySQL'da \"IS NOT NULL\" operatori nima?",
+      "answer": "IS NOT NULL operatori ma'lum bir ustundagi qiymat NULL emasligini tekshiradi. Bu operatorni filtrlar yaratishda qo'llash mumkin, masalan, faqat NULL bo'lmagan qiymatlarni tanlashda. WHERE column_name IS NOT NULL so'rovi bunday yozuvlarni qaytaradi.",
+      "keywords": ["IS NOT NULL", "NULL emas", "mavjud qiymat"]
+    },
+    {
+      "id": 60,
+      "question": "MySQL'da \"SELECT SUM()\" funksiyasi nima?",
+      "answer": "SELECT SUM() funksiyasi raqamli ustundagi barcha qiymatlarning yig'indisini hisoblash uchun ishlatiladi. Bu agregat funksiya ko'pincha moliyaviy hisobotlar yoki statistik tahlil qilishda qo'llaniladi.",
+      "keywords": ["SUM()", "yig'indi", "total", "agregat"]
+    },
+    {
+      "id": 61,
+      "question": "MySQL'da \"SELECT AVG()\" funksiyasi nima?",
+      "answer": "SELECT AVG() funksiyasi raqamli ustundagi barcha qiymatlarning o'rtacha qiymatini hisoblash uchun ishlatiladi. Bu agregat funksiya ko'pincha ma'lumotlarni tahlil qilishda, masalan, o'rtacha baholarni yoki o'rtacha daromadlarni aniqlashda foydalidir.",
+      "keywords": ["AVG()", "o'rtacha", "average", "agregat"]
+    },
+    {
+      "id": 62,
+      "question": "MySQL'da \"SELECT MIN()\" funksiyasi nima?",
+      "answer": "SELECT MIN() funksiyasi raqamli yoki sanali ustundagi eng kichik qiymatni qaytaradi. Bu funksiya statistik tahlil qilishda yoki minimum qiymatlarni aniqlashda qo'llaniladi.",
+      "keywords": ["MIN()", "minimum", "eng kichik", "agregat"]
+    },
+    {
+      "id": 63,
+      "question": "MySQL'da \"SELECT MAX()\" funksiyasi nima?",
+      "answer": "SELECT MAX() funksiyasi raqamli yoki sanali ustundagi eng katta qiymatni qaytaradi. Bu funksiya ma'lumotlar tahlilida eng katta qiymatlarni aniqlashda qo'llaniladi, masalan, eng yuqori baho yoki eng katta daromadni aniqlashda.",
+      "keywords": ["MAX()", "maksimum", "eng katta", "agregat"]
+    },
+    {
+      "id": 64,
+      "question": "MySQL'da \"HAVING\" klauzasi qanday ishlaydi?",
+      "answer": "HAVING klauzasi guruhlangan natijalarni filtrlaydi. Bu klauza GROUP BY klauzasidan keyin ishlatiladi va agregat funksiyalar yordamida guruhlanadigan qiymatlarni cheklash imkonini beradi. WHERE klauzasi esa guruhlashdan oldin ishlaydi.",
+      "keywords": ["HAVING", "guruhlangan filtr", "GROUP BY", "agregat shart"]
+    },
+    {
+      "id": 65,
+      "question": "MySQL'da \"GROUP BY\" klauzasi nima?",
+      "answer": "GROUP BY klauzasi, ma'lum bir ustun bo'yicha yozuvlarni guruhlash uchun ishlatiladi. Bu klauza agregat funksiyalar bilan birga ishlatiladi, masalan, COUNT(), SUM(), AVG() va boshqalar. GROUP BY yordamida ma'lumotlarni guruhlash va tahlil qilish mumkin.",
+      "keywords": ["GROUP BY", "guruhlash", "agregatsiya"]
+    },
+    {
+      "id": 66,
+      "question": "MySQL'da \"ORDER BY\" klauzasi nima?",
+      "answer": "ORDER BY klauzasi so'rov natijalarini tartibga solish uchun ishlatiladi. So'rovlar natijalarini o'sish tartibida (ASC) yoki kamayish tartibida (DESC) saralash mumkin. Bu klauza natijalarni foydalanuvchi uchun qulay tarzda ko'rsatishda yordam beradi.",
+      "keywords": ["ORDER BY", "tartiblash", "sorting", "ASC", "DESC"]
+    },
+    {
+      "id": 67,
+      "question": "MySQL'da \"JOIN\" turlari qanday?",
+      "answer": "MySQL'da asosiy JOIN turlari: INNER JOIN (faqat mos yozuvlar), LEFT JOIN (birinchi jadval + mos yozuvlar), RIGHT JOIN (ikkinchi jadval + mos yozuvlar), FULL OUTER JOIN (barcha yozuvlar). Har biri turli xil ma'lumotlarni birlashtirish uchun ishlatiladi.",
+      "keywords": ["JOIN turlari", "INNER", "LEFT", "RIGHT", "FULL OUTER"]
+    },
+    {
+      "id": 68,
+      "question": "MySQL'da \"INNER JOIN\" nima?",
+      "answer": "INNER JOIN ikki jadvalni birlashtiradi va faqat ularning mos yozuvlarini ko'rsatadi. Agar ikkala jadvalda ham mos yozuvlar bo'lmasa, u holda natijada yozuvlar bo'lmaydi. INNER JOIN odatda asosiy ma'lumotlarni olish uchun ishlatiladi.",
+      "keywords": ["INNER JOIN", "mos yozuvlar", "intersection"]
+    },
+    {
+      "id": 69,
+      "question": "MySQL'da \"LEFT JOIN\" nima?",
+      "answer": "LEFT JOIN birinchi jadvaldagi barcha yozuvlarni va ikkinchi jadvaldagi mos yozuvlarni ko'rsatadi. Agar ikkinchi jadvalda mos yozuvlar bo'lmasa, NULL qiymatlari ko'rsatiladi. Bu klauza birinchi jadvaldagi barcha ma'lumotlarni olishda foydalidir.",
+      "keywords": ["LEFT JOIN", "LEFT OUTER JOIN", "chap birlashtirish"]
+    },
+    {
+      "id": 70,
+      "question": "MySQL'da \"RIGHT JOIN\" nima?",
+      "answer": "RIGHT JOIN ikkinchi jadvaldagi barcha yozuvlarni va birinchi jadvaldagi mos yozuvlarni ko'rsatadi. Agar birinchi jadvalda mos yozuvlar bo'lmasa, NULL qiymatlari ko'rsatiladi. RIGHT JOIN ikkinchi jadvaldagi barcha ma'lumotlarni olish uchun ishlatiladi.",
+      "keywords": ["RIGHT JOIN", "RIGHT OUTER JOIN", "o'ng birlashtirish"]
+    },
+    {
+      "id": 71,
+      "question": "MySQL'da \"SELF JOIN\" nima?",
+      "answer": "SELF JOIN - bu bir jadvalning o'zi bilan bog'lanishidir. Bu usul bir jadvaldagi yozuvlarni boshqa yozuvlarga nisbatan solishtirishda qo'llaniladi. Masalan, xodimlar va ularning boshliqlari haqida ma'lumotlarni olishda ishlatiladi.",
+      "keywords": ["SELF JOIN", "o'z-o'ziga birlashtirish", "rekursiv"]
+    },
+    {
+      "id": 72,
+      "question": "MySQL'da \"UNION\" operatori nima?",
+      "answer": "UNION operatori ikki yoki undan ortiq SELECT so'rovining natijalarini birlashtiradi. Bu operator yordamida har bir so'rovdan qaytgan natijalar yagona ro'yxatda birlashtiriladi, va takroriy yozuvlar olib tashlanadi. UNION ALL takroriy yozuvlarni saqlaydi.",
+      "keywords": ["UNION", "UNION ALL", "birlashtirish", "takroriy"]
+    },
+    {
+      "id": 73,
+      "question": "MySQL'da \"DISTINCT\" operatori nima?",
+      "answer": "DISTINCT operatori takroriy qiymatlarni olib tashlaydi va faqat noyob yozuvlarni qaytaradi. Bu operator ko'pincha so'rovlar natijalaridagi takroriy yozuvlarni olib tashlash uchun ishlatiladi.",
+      "keywords": ["DISTINCT", "noyob", "unique", "takroriy olib tashlash"]
+    },
+    {
+      "id": 74,
+      "question": "MySQL'da \"LIMIT\" klauzasi nima?",
+      "answer": "LIMIT klauzasi so'rov natijalarining miqdorini cheklash uchun ishlatiladi. Bu klauza ma'lumotlarni sahifalashda yoki faqat bir nechta yozuvlarni ko'rsatishda foydalidir. LIMIT n so'rovi faqat n ta yozuvni qaytaradi.",
+      "keywords": ["LIMIT", "cheklash", "natijalar soni"]
+    },
+    {
+      "id": 75,
+      "question": "MySQL'da \"OFFSET\" klauzasi nima?",
+      "answer": "OFFSET klauzasi, LIMIT bilan birga ishlatilganda, so'rovning natijasida qaytariladigan yozuvlarning boshlanish nuqtasini belgilaydi. Masalan, LIMIT 10 OFFSET 20 so'rovi 20-qatordan boshlanib, keyingi 10 yozuvni qaytaradi.",
+      "keywords": ["OFFSET", "boshlash nuqtasi", "sahifalash"]
+    },
+    {
+      "id": 76,
+      "question": "MySQL'da \"CHECK\" cheklovini qanday ishlatish mumkin?",
+      "answer": "CHECK cheklovi, ustunda kiritilishi mumkin bo'lgan qiymatlar uchun maxsus shartlarni o'rnatadi. Masalan, agar ustunda faqat musbat raqamlar bo'lishi kerak bo'lsa, CHECK (column_name > 0) sharti qo'llaniladi. MySQL 5.7 va undan oldingi versiyalarda CHECK cheklovi faollashtirilmagan.",
+      "keywords": ["CHECK", "cheklov", "constraint", "validation"]
+    },
+    {
+      "id": 77,
+      "question": "MySQL'da \"INDEX\" nima?",
+      "answer": "INDEX ma'lumotlar bazasida qidiruvni tezlashtirish uchun ishlatiladi. Bu, ustunlar bo'yicha tezkor qidiruvni amalga oshirishda yordam beradi va ma'lumotlarni o'qish jarayonini optimallashtiradi. INDEX ma'lumotlarni tartiblaydi, shunda qidiruv jarayoni tezroq amalga oshiriladi.",
+      "keywords": ["INDEX", "indeks", "qidiruv tezligi", "optimizatsiya"]
+    },
+    {
+      "id": 78,
+      "question": "MySQL'da \"FULLTEXT INDEX\" nima?",
+      "answer": "FULLTEXT INDEX matnli ma'lumotlarni tezkor qidirish uchun ishlatiladi. Bu indeks turini asosan matnli qidiruvlarda, masalan, so'zlarni qidirishda ishlatish mumkin. FULLTEXT INDEX matnli ustunlarga (TEXT, VARCHAR, CHAR) qo'llaniladi.",
+      "keywords": ["FULLTEXT INDEX", "matn qidirish", "full-text search"]
+    },
+    {
+      "id": 79,
+      "question": "MySQL'da \"EXPLAIN\" nima?",
+      "answer": "EXPLAIN so'rovi, MySQL'ning so'rovni qanday bajarishini tushuntiradi. Bu so'rovning ishlash rejasini ko'rsatadi, bu esa so'rovni optimallashtirish va tezlashtirish uchun juda foydalidir. EXPLAIN yordamida so'rovlar qanday indeklardan foydalanayotganini aniqlash mumkin.",
+      "keywords": ["EXPLAIN", "query plan", "bajarilish rejasi", "optimizatsiya"]
+    },
+    {
+      "id": 80,
+      "question": "MySQL'da \"DESCRIBE\" yoki \"SHOW COLUMNS\" nima?",
+      "answer": "DESCRIBE yoki SHOW COLUMNS so'rovlar yordamida, jadvalning strukturasini, ya'ni ustun nomlarini, turlarini, cheklovlarni va boshqa xususiyatlarini ko'rish mumkin. Bu so'rovlar jadvalning tarkibini tushunishda yordam beradi.",
+      "keywords": ["DESCRIBE", "SHOW COLUMNS", "jadval strukturasi", "schema"]
+    },
+    {
+      "id": 81,
+      "question": "MySQL'da \"TRUNCATE\" va \"DELETE\" o'rtasidagi farq nima?",
+      "answer": "TRUNCATE so'rovi jadvaldagi barcha yozuvlarni o'chiradi, lekin jadvalning tuzilishini saqlab qoladi. DELETE esa yozuvlarni shartli ravishda o'chirish uchun ishlatiladi. TRUNCATE tezroq ishlaydi va tranzaksion emas, DELETE esa ROLLBACK orqali qaytarilishi mumkin.",
+      "keywords": ["TRUNCATE", "DELETE", "o'chirish", "farq"]
+    },
+    {
+      "id": 82,
+      "question": "MySQL'da \"NOT NULL\" cheklov nima?",
+      "answer": "NOT NULL cheklovi ustundagi qiymatlarning bo'sh bo'lmasligini ta'minlaydi. Ya'ni, ushbu ustunga NULL qiymat kiritish mumkin emas. Bu cheklov ma'lumotlar bazasida to'liq ma'lumotlarni saqlash uchun ishlatiladi.",
+      "keywords": ["NOT NULL", "cheklov", "bo'sh emas", "majburiy maydon"]
+    },
+    {
+      "id": 83,
+      "question": "MySQL'da \"ALTER TABLE\" nima?",
+      "answer": "ALTER TABLE komandi jadval tuzilmasini o'zgartirish uchun ishlatiladi. Masalan, ustun qo'shish, o'chirish yoki nomini o'zgartirishda ishlatiladi. ALTER TABLE orqali jadvalga yangi ustunlar qo'shish yoki mavjud ustunlarning xususiyatlarini o'zgartirish mumkin.",
+      "keywords": ["ALTER TABLE", "jadval o'zgartirish", "DDL", "schema modification"]
+    },
+    {
+      "id": 84,
+      "question": "MySQL'da \"CREATE INDEX\" nima?",
+      "answer": "CREATE INDEX komandi ma'lum bir ustun bo'yicha indeks yaratish uchun ishlatiladi. Bu indeks ma'lumotlarni tezroq qidirish va olish imkonini beradi. Sintaksisi: CREATE INDEX idx_name ON table_name (column_name).",
+      "keywords": ["CREATE INDEX", "indeks yaratish", "DDL"]
+    },
+    {
+      "id": 85,
+      "question": "MySQL'da \"DROP INDEX\" nima?",
+      "answer": "DROP INDEX komandi ma'lum bir indeksni o'chirish uchun ishlatiladi. Indeksni o'chirish orqali jadvalni qayta ishlashda indeksning ta'sirini kamaytirish mumkin. Sintaksisi: DROP INDEX index_name ON table_name.",
+      "keywords": ["DROP INDEX", "indeks o'chirish", "DDL"]
+    },
+    {
+      "id": 86,
+      "question": "Ma'lumotlar bazasi (MB) va ma'lumotlar bazasini boshqarish tizimini (DBMS) tushuntiring.",
+      "answer": "Ma'lumotlar bazasini boshqarish tizimi - bu saqlangan ma'lumotlarni boshqaradigan, ma'lumotlarning takrorlanishini yo'q qiladigan va ulardan samarali foydalanish uchun ma'lumotlarni boshqaradigan dasturiy tizim.",
+      "keywords": ["DBMS", "ma'lumotlar bazasi", "boshqarish tizimi"]
+    },
+    {
+      "id": 87,
+      "question": "Ma'lumotlar bazasidan foydalanishning afzalliklari.",
+      "answer": "Haqiqiy vaqtda ma'lumotlarni qayta ishlash mumkin. Ma'lumotlarning takrorlanishini olib tashlash mumkin. Ma'lumotlarni standartlashtirish mumkin. Ma'lumotlarning mustahkamligi, yaxlitligi va xavfsizligi kafolatlanishi mumkin.",
+      "keywords": ["afzalliklar", "mustahkamlik", "xavfsizlik", "samaradorlik"]
+    },
+    {
+      "id": 88,
+      "question": "Ma'lumotlar bazasining iyerarxik modeli qanday ishlaydi?",
+      "answer": "Iyerarxik ma'lumotlar bazasi modeli 1960-yillarda paydo bo'lgan. Bu modelda ma'lumotlar daraxt strukturasida saqlanadi, ya'ni har bir ota ma'lumotning bir yoki bir nechta bolalari bo'lishi mumkin. Bu model juda samarali edi, lekin ma'lumotlar o'rtasida murakkab aloqalar o'rnatish qiyin bo'lgan.",
+      "keywords": ["iyerarxik model", "daraxt struktura", "parent-child"]
+    },
+    {
+      "id": 89,
+      "question": "Ma'lumotlar bazasining tarmoq modeli qanday ishlaydi?",
+      "answer": "Tarmoq modeli 1960-yillarda iyerarxik modelni takomillashtirish sifatida paydo bo'ldi. Tarmoq modelida ma'lumotlar ko'plab bog'lanishlarga ega bo'lishi mumkin, bu esa ma'lumotlarning ko'p tomonlama aloqalarini ifodalashga imkon beradi.",
+      "keywords": ["tarmoq modeli", "network model", "ko'p bog'lanish"]
+    },
+    {
+      "id": 90,
+      "question": "DBMSning tarixi va rivojlanishining dasturlashga qanday ta'siri bo'ldi?",
+      "answer": "DBMSning tarixi dasturlashga katta ta'sir ko'rsatdi. 1960-yillarda fayllar tizimlari qo'llanilgan bo'lsa, 1970-yillarda relatsion modelning kiritilishi dasturlashni soddalashtirdi. SQL tili ishlab chiqilishi bilan ma'lumotlar bilan ishlash ancha soddalashtirildi.",
+      "keywords": ["DBMS tarixi", "rivojlanish", "SQL", "ta'sir"]
+    },
+    {
+      "id": 91,
+      "question": "Relatsion ma'lumotlar bazasining SQL tiliga asoslanishining afzalliklari nimalardan iborat?",
+      "answer": "SQL tilining relatsion ma'lumotlar bazalarida qo'llanilishi dasturlashni soddalashtiradi va ma'lumotlar bilan ishlashni tezlashtiradi. SQL yordamida ma'lumotlarni yaratish, yangilash va o'chirishni sodda tarzda bajarish mumkin. SQLning portativligi turli DBMS tizimlarida bir xil sintaksisni qo'llash imkonini beradi.",
+      "keywords": ["SQL afzalliklari", "portativlik", "soddalik", "standartlashtirish"]
+    },
+    {
+      "id": 92,
+      "question": "DBMSning o'zgarishi qanday dasturlash metodologiyalariga olib keldi?",
+      "answer": "DBMSning o'zgarishi va rivojlanishi yangi dasturlash metodologiyalarining paydo bo'lishiga olib keldi. Agile, Scrum kabi metodologiyalar ma'lumotlar bazalarini tezkor va samarali boshqarishga yordam berdi. Bu metodologiyalar yordamida dasturchilar bir nechta iteratsiyalar orqali loyihalarni tezda ishlab chiqish imkoniyatiga ega bo'ldilar.",
+      "keywords": ["metodologiyalar", "Agile", "Scrum", "iterativ rivojlanish"]
+    },
+    {
+      "id": 93,
+      "question": "Ma'lumotlar bazasini boshqaruv tizimlarining kelib chiqishi qanday?",
+      "answer": "Ma'lumotlar bazasini boshqaruv tizimlarining kelib chiqishi 1960-yillarga borib taqaladi. IBM kompaniyasi tomonidan ishlab chiqilgan \"IMS\" tizimi birinchi marta ma'lumotlar bazasini boshqarishning samarali usulini taqdim etdi. 1970-yillarda Edgar F. Coddning relatsion modelga oid ilmiy ishlari DBMSning asosiy tamoyillarini shakllantirdi.",
+      "keywords": ["kelib chiqish", "IMS", "Edgar Codd", "relatsion model"]
+    },
+    {
+      "id": 94,
+      "question": "Relatsion ma'lumotlar bazasining paydo bo'lishi qachon bo'ldi?",
+      "answer": "Relatsion ma'lumotlar bazasi konseptsiyasi 1970-yilda Edgar F. Codd tomonidan taklif qilingan. Codd ma'lumotlarni jadvallar (relatsiyalar) sifatida tartibga solish va ular o'rtasidagi aloqalarni matematik modellar yordamida ifodalashni taklif etdi.",
+      "keywords": ["1970", "Edgar Codd", "relatsion model", "matematik asos"]
+    },
+    {
+      "id": 95,
+      "question": "Ma'lumotlar bazasining tarixi qanday o'zgarib bordi?",
+      "answer": "Ma'lumotlar bazasi tizimlari 1960-yillarda iyerarxik va tarmoq modeli shaklida ishlab chiqilgan. 1970-yillarda relatsion model paydo bo'ldi. 1980-yillarda SQL standart til sifatida qabul qilindi. 1990-yillarda NoSQL tizimlari va bulutli ma'lumotlar bazalari rivojlandi.",
+      "keywords": ["tarix", "evolyutsiya", "turli modellar", "rivojlanish"]
+    },
+    {
+      "id": 96,
+      "question": "Ma'lumotlar bazasi boshqaruv tizimlarining dasturlashdagi roli qanday?",
+      "answer": "Ma'lumotlar bazasini boshqaruv tizimlari dasturlashda juda muhim o'rin tutadi. Ular ma'lumotlarni saqlash va qayta ishlashni tashkil etadi, ma'lumotlarga tezkor kirishni ta'minlaydi. DBMS dasturchilarga SQL tilini qo'llab-quvvatlash orqali ma'lumotlar bilan ishlashda soddalashtirilgan usullarni taqdim etadi.",
+      "keywords": ["dasturlashtagi rol", "ma'lumotlar bilan ishlash", "samaradorlik"]
+    },
+    {
+      "id": 97,
+      "question": "Birlamchi va ikkilamchi kalitlar o'rtasidagi farq nima?",
+      "answer": "Birlamchi kalit jadvaldagi har bir yozuvni noyob ravishda aniqlash uchun ishlatiladi. Ikkilamchi kalit esa birlamchi kalitga bog'langan, boshqa jadvallarga mos keladigan maydondir. Birlamchi kalitning qiymatlari takrorlanmasligi kerak, ikkilamchi kalit optional bo'lishi mumkin.",
+      "keywords": ["primary key", "foreign key", "farq", "bog'lanish"]
+    },
+    {
+      "id": 98,
+      "question": "NoSQL tizimlari nima va ular nega rivojlandi?",
+      "answer": "NoSQL tizimlari ma'lumotlarni saqlash va qayta ishlashda relatsion modelga tayanmaydigan tizimlardir. Ular katta hajmdagi ma'lumotlarni samarali tarzda boshqarish uchun ishlab chiqilgan. NoSQL tizimlari tezkor qidirish va yarim strukturaviy ma'lumotlar bilan ishlashda qulaylik yaratadi.",
+      "keywords": ["NoSQL", "big data", "miqyoslanish", "strukturasiz ma'lumotlar"]
+    },
+    {
+      "id": 99,
+      "question": "DBMSning ishlash printsipi dasturlashda qanday qo'llaniladi?",
+      "answer": "DBMSning ishlash printsipi dasturlashda ma'lumotlarni boshqarishda samarali va optimallashtirilgan usullarni qo'llashni ta'minlaydi. Dasturda ma'lumotlar bazasiga SQL so'rovlarini ishlatish orqali murojaat qilish mumkin. DBMS foydalanuvchining so'rovlariga bazadagi ma'lumotlarga tezda javob beradi.",
+      "keywords": ["ishlash printsipi", "SQL", "ma'lumotlar bilan ishlash"]
+    },
+    {
+      "id": 100,
+      "question": "Ma'lumotlar bazasi tizimlarining xavfsizlikni ta'minlashdagi o'rni qanday?",
+      "answer": "Ma'lumotlar bazasi tizimlari xavfsizlikni ta'minlashda juda muhim rol o'ynaydi. Ular foydalanuvchi autentifikatsiyasini, ma'lumotlarga kirishni boshqarishni va tranzaktsiyalarni himoya qilishni ta'minlaydi. DBMSda ma'lumotlarni shifrlash, foydalanuvchi huquqlarini boshqarish va audit izlarini saqlash imkoniyatlari mavjud.",
+      "keywords": ["xavfsizlik", "autentifikatsiya", "shifrlash", "audit"]
+    }
+  ]
+}

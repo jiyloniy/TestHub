@@ -1,0 +1,1809 @@
+{
+  "title": "Python Dasturlash tili Test Bazasi",
+  "description": "Python dasturlash tili bo'yicha 150 ta test savoli",
+  "totalQuestions": 150,
+  "timeLimit": 180,
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = {1, 2, 3}\nx.add(2)\nprint(x)",
+      "options": {
+        "A": "{1,2,3,2}",
+        "B": "{1,2,3}",
+        "C": "Xatolik",
+        "D": "{2}"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 2,
+      "question": "Pythonda memory management asosan....?",
+      "code": null,
+      "options": {
+        "A": "Qo'lda",
+        "B": "Garbage Collector",
+        "C": "OS orqali",
+        "D": "Compiler"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 3,
+      "question": "is operatori nimani tekshiradi?",
+      "code": null,
+      "options": {
+        "A": "Qiymat tengligini",
+        "B": "Tipni",
+        "C": "Xotira manzilini",
+        "D": "Uzunlikni"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 4,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "a = [1, 2, 3]\nb = a[:]\nb.append(4)\nprint(a)",
+      "options": {
+        "A": "[1,2,3,4]",
+        "B": "[1,2,3]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 5,
+      "question": "Dictionaryda .keys() nimani qaytaradi?",
+      "code": null,
+      "options": {
+        "A": "List",
+        "B": "Tuple",
+        "C": "dict_keys obyekt",
+        "D": "Set"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 6,
+      "question": "sorted([3,1,2]) natijasi?",
+      "code": null,
+      "options": {
+        "A": "[3,1,2]",
+        "B": "[1,2,3]",
+        "C": "Xatolik",
+        "D": "(1,2,3)"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 7,
+      "question": "Natijani aniqlang.",
+      "code": "print(\"5\" + \"3\")",
+      "options": {
+        "A": "8",
+        "B": "53",
+        "C": "Xatolik",
+        "D": "\"8\""
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 8,
+      "question": "{1,2,3} & {2,3,4} natijasini toping.",
+      "code": null,
+      "options": {
+        "A": "{1}",
+        "B": "{2,3}",
+        "C": "{4}",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 9,
+      "question": "list(range(2, 8, 2)) natijasini toping.",
+      "code": null,
+      "options": {
+        "A": "[2,4,6]",
+        "B": "[2,4,6,8]",
+        "C": "[4,6]",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 10,
+      "question": "Quyidagi kodni natijasini aniqlang.",
+      "code": "x = [10, 20, 30]\nprint(x.index(20))",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 11,
+      "question": "Tuple haqida to'g'ri fikrni toping.",
+      "code": null,
+      "options": {
+        "A": "Element o'zgartirish mumkin",
+        "B": "Tartibsiz kolleksiya",
+        "C": "Immutable",
+        "D": "Faqat son saqlaydi"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 12,
+      "question": "Natijani aniqlang.",
+      "code": "x = [1,2,3]\nprint(x[-2])",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 13,
+      "question": "bool([0]) natijasi?",
+      "code": null,
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "0",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 14,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "a = \"Python\"\nprint(a[1:4])",
+      "options": {
+        "A": "Pyt",
+        "B": "yth",
+        "C": "tho",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 15,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = 5\ny = 5\nprint(x is y)",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 16,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "def gen():\n    yield 1\n    yield 2\n\ng = gen()\nprint(next(g))\nprint(next(g))",
+      "options": {
+        "A": "1 1",
+        "B": "1 2",
+        "C": "2 2",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 17,
+      "question": "Bitwise operatorlar qaysi tip bilan ishlaydi?",
+      "code": null,
+      "options": {
+        "A": "float",
+        "B": "int",
+        "C": "str",
+        "D": "bool"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 18,
+      "question": "Pythonda break operatorining vazifasi qanday?",
+      "code": null,
+      "options": {
+        "A": "Iteratsiyani o'tkazadi",
+        "B": "Siklni to'xtatadi",
+        "C": "Funksiyani tugatadi",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 19,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "try:\n    raise ValueError(\"Xato\")\nexcept ValueError:\n    print(\"Handled\")",
+      "options": {
+        "A": "Xato",
+        "B": "Handled",
+        "C": "Error",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 20,
+      "question": "Pythonda pass operatorining vazifasi qanday?",
+      "code": null,
+      "options": {
+        "A": "Siklni tugatadi",
+        "B": "Bo'sh operator",
+        "C": "Keyingisiga siklga o'tkizadi",
+        "D": "Shart tekshirib o'tkizadi"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 21,
+      "question": "\"abc\".upper() → Quyidagi kodning natijasini toping.",
+      "code": null,
+      "options": {
+        "A": "abc",
+        "B": "ABC",
+        "C": "Abc",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 22,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "x = [1,2]\ny = x\ny += [3]\nprint(x)",
+      "options": {
+        "A": "[1,2]",
+        "B": "[1,2,3]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 23,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "list(\"abc\")",
+      "options": {
+        "A": "\"abc\"",
+        "B": "['abc']",
+        "C": "['a','b','c']",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 24,
+      "question": "Pythonda docstring ... uchun ishlatiladi?",
+      "code": null,
+      "options": {
+        "A": "Comment",
+        "B": "Dokumentatsiya",
+        "C": "Error",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 25,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "x = [1,2,3]\nprint(x.pop())",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 26,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "0.1 + 0.2 == 0.3",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 27,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "def f(x=[]):\n    x.append(1)\n    print(x)\n\nf()\nf()",
+      "options": {
+        "A": "[1] [1]",
+        "B": "[1] [1,1]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 28,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "\"Python\"[::-1]",
+      "options": {
+        "A": "Python",
+        "B": "nohtyP",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 29,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "x = {1,2,3}\nprint(2 in x)",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 30,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "set([1,1,2,3])",
+      "options": {
+        "A": "[1,2,3]",
+        "B": "{1,2,3}",
+        "C": "Xatolik",
+        "D": "(1,2,3)"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 31,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "x = [1,2,3]\nprint(x[::2])",
+      "options": {
+        "A": "[1,3]",
+        "B": "[2]",
+        "C": "[1,2]",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 32,
+      "question": "Qaysi funksiya iterator qaytaradi?",
+      "code": null,
+      "options": {
+        "A": "list()",
+        "B": "range()",
+        "C": "tuple()",
+        "D": "str()"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 33,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "print(bool(\"False\"))",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 34,
+      "question": "List comprehension natijasi qaysi variantda tog'ri keltirilgan?",
+      "code": "[x*x for x in range(3)]",
+      "options": {
+        "A": "[1,4,9]",
+        "B": "[0,1,4]",
+        "C": "[0,1,4,9]",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 35,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "a = [1,2,3]\nprint(sum(a))",
+      "options": {
+        "A": "5",
+        "B": "6",
+        "C": "7",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 36,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "min([3,7,2])",
+      "options": {
+        "A": "7",
+        "B": "3",
+        "C": "2",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 37,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "print(\"a\" * 3)",
+      "options": {
+        "A": "aaa",
+        "B": "a3",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 38,
+      "question": "Qaysi biri dictionary comprehension?",
+      "code": null,
+      "options": {
+        "A": "[x for x in range(3)]",
+        "B": "{x: x*x for x in range(3)}",
+        "C": "(x for x in range(3))",
+        "D": "{1,2,3}"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 39,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "x = (1,2,3)\nprint(x.count(2))",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 40,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "abs(-5)",
+      "options": {
+        "A": "-5",
+        "B": "5",
+        "C": "0",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 41,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "print(all([True, 1, \"a\"]))",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 42,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "print(any([0, \"\", None]))",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 43,
+      "question": "Pythonda immutable (o'zgarmas) obyekt qaysi hisoblanadi?",
+      "code": null,
+      "options": {
+        "A": "list",
+        "B": "dict",
+        "C": "tuple",
+        "D": "set"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 44,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "x = [1,2,3]\ndel x[1]\nprint(x)",
+      "options": {
+        "A": "[1,2,3]",
+        "B": "[1,3]",
+        "C": "[2,3]",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 45,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "round(3.6)",
+      "options": {
+        "A": "3",
+        "B": "4",
+        "C": "3.6",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 46,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "print(5 > 3 > 1)",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 47,
+      "question": "Pythonda == operatorining asosiy vazifasi nimadan iborat?",
+      "code": null,
+      "options": {
+        "A": "Obyekt manzilini solishtirish",
+        "B": "Qiymatlarni solishtirish",
+        "C": "Tiplarni solishtirish",
+        "D": "Xotirani tozalash"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 48,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "x = {1,2}\nx.update([3,4])\nprint(x)",
+      "options": {
+        "A": "{1,2}",
+        "B": "{1,2,3,4}",
+        "C": "Xatolik",
+        "D": "[1,2,3,4]"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 49,
+      "question": "Quyidagi kod ishga tushirilganda konsolda qanday natija chiqadi?",
+      "code": "print(2 ** 3 ** 2)",
+      "options": {
+        "A": "64",
+        "B": "512",
+        "C": "256",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 50,
+      "question": "Qaysi biri generator ifodasi?",
+      "code": null,
+      "options": {
+        "A": "[x*x for x in range(3)]",
+        "B": "{x*x for x in range(3)}",
+        "C": "(x*x for x in range(3))",
+        "D": "range(3)"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 51,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1, 2, 3]\nprint(x[::-1])",
+      "options": {
+        "A": "[1,2,3]",
+        "B": "[3,2,1]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 52,
+      "question": "Method overriding nimani anglatadi?",
+      "code": null,
+      "options": {
+        "A": "Metodni o'chirish",
+        "B": "Parent klass metodini qayta yozish",
+        "C": "Static metod yaratish",
+        "D": "Lambda ishlatish"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 53,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "{1,2,3} - {2}",
+      "options": {
+        "A": "{1,3}",
+        "B": "{2}",
+        "C": "{1,2,3}",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 54,
+      "question": "Pythonda return operatori bo'lmagan funksiya nima qaytaradi?",
+      "code": null,
+      "options": {
+        "A": "0",
+        "B": "False",
+        "C": "None",
+        "D": "Error"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 55,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1,2,3]\nx.remove(2)\nprint(x)",
+      "options": {
+        "A": "[1,3]",
+        "B": "[2,3]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 56,
+      "question": "Polymorphism nima?",
+      "code": null,
+      "options": {
+        "A": "Bir nechta klass",
+        "B": "Bir xil metod – turli natija",
+        "C": "Meros olish",
+        "D": "Private atribut"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 57,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = {1,2}\nx.add(3)\nprint(x)",
+      "options": {
+        "A": "{1,2}",
+        "B": "{1,2,3}",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 58,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "'python'.capitalize()",
+      "options": {
+        "A": "Python",
+        "B": "PYTHON",
+        "C": "python",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 59,
+      "question": "Pythonda fayl ochish uchun qaysi funksiya ishlatiladi?",
+      "code": null,
+      "options": {
+        "A": "file()",
+        "B": "open()",
+        "C": "read()",
+        "D": "write()"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 60,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [10,20,30]\nprint(x[1])",
+      "options": {
+        "A": "10",
+        "B": "20",
+        "C": "30",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 61,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(2 < 3 and 3 < 4)",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 62,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1,2,3]\nprint(4 in x)",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 63,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "set('aba')",
+      "options": {
+        "A": "{'a','b'}",
+        "B": "{'a','b','a'}",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 64,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = {'a':1, 'b':2}\nprint(x.get('c'))",
+      "options": {
+        "A": "0",
+        "B": "None",
+        "C": "Xatolik",
+        "D": "'c'"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 65,
+      "question": "Pythonda fayllar bilan ishlaganda 'a' rejimi nimani bildiradi?",
+      "code": null,
+      "options": {
+        "A": "O'qish",
+        "B": "Qo'shish (append)",
+        "C": "Overwrite",
+        "D": "Binary"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 66,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1,2,3]\nx.clear()\nprint(x)",
+      "options": {
+        "A": "[1,2,3]",
+        "B": "[]",
+        "C": "None",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 67,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(3 * 'ab')",
+      "options": {
+        "A": "ababab",
+        "B": "ab3",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 68,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = (1,2,3)\nprint(x[1])",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 69,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(sum(range(4)))",
+      "options": {
+        "A": "6",
+        "B": "10",
+        "C": "4",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 70,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1,2,3]\nprint(x.count(2))",
+      "options": {
+        "A": "0",
+        "B": "1",
+        "C": "2",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 71,
+      "question": "Pythonda dictionary (lug'at) kalitlari qanday xususiyatga ega bo'lishi kerak?",
+      "code": null,
+      "options": {
+        "A": "Mutable bo'lishi kerak",
+        "B": "Immutable bo'lishi kerak",
+        "C": "Faqat string bo'lishi kerak",
+        "D": "Faqat son bo'lishi kerak"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 72,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(10 / 3)",
+      "options": {
+        "A": "3",
+        "B": "3.33",
+        "C": "3.0 dan katta float",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 73,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(10 // 3)",
+      "options": {
+        "A": "3.33",
+        "B": "3",
+        "C": "4",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 74,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(10 % 3)",
+      "options": {
+        "A": "1",
+        "B": "3",
+        "C": "0",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 75,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1,2]\nprint(x * 3)",
+      "options": {
+        "A": "[3,6]",
+        "B": "[1,2,1,2,1,2]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 76,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print('abc'[::2])",
+      "options": {
+        "A": "ab",
+        "B": "ac",
+        "C": "bc",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 77,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(list(range(1,5)))",
+      "options": {
+        "A": "[0,1,2,3,4]",
+        "B": "[1,2,3,4]",
+        "C": "[1,2,3,4,5]",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 78,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(min(5,2,8))",
+      "options": {
+        "A": "5",
+        "B": "2",
+        "C": "8",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 79,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(abs(-3.5))",
+      "options": {
+        "A": "-3.5",
+        "B": "3.5",
+        "C": "0",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 80,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(round(2.49))",
+      "options": {
+        "A": "2",
+        "B": "3",
+        "C": "2.49",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 81,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(all([1,2,0]))",
+      "options": {
+        "A": "True",
+        "B": "False",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 82,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(any([0,'',5]))",
+      "options": {
+        "A": "False",
+        "B": "True",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 83,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = {'a':1}\nx['b'] = 2\nprint(x)",
+      "options": {
+        "A": "{'a':1}",
+        "B": "{'a':1,'b':2}",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 84,
+      "question": "Pythonda staticmethod xususiyati nima?",
+      "code": null,
+      "options": {
+        "A": "self ishlatadi",
+        "B": "cls ishlatadi",
+        "C": "Klass bilan bog'liq emas",
+        "D": "Error"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 85,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "class A:\n    x = 5\n\n    @classmethod\n    def show(cls):\n        print(cls.x)\n\nA.show()",
+      "options": {
+        "A": "0",
+        "B": "5",
+        "C": "Error",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 86,
+      "question": "Iterator protokoli qaysi metodlarni talab qiladi?",
+      "code": null,
+      "options": {
+        "A": "next",
+        "B": "iter",
+        "C": "iter va next",
+        "D": "yield"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 87,
+      "question": "Pythonda tuple nima sababli immutable hisoblanadi?",
+      "code": null,
+      "options": {
+        "A": "Xotira tejaladi",
+        "B": "Elementlarni o'zgartirib bo'lmaydi",
+        "C": "Indeks yo'q",
+        "D": "Faqat sonlar saqlanadi"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 88,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print('abcdef'[1:5:2])",
+      "options": {
+        "A": "bdf",
+        "B": "bd",
+        "C": "ace",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 89,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = (1,2,2,3)\nprint(x.count(2))",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 90,
+      "question": "Pythonda Membership (a'zolik) operatorlari qaysilar?",
+      "code": null,
+      "options": {
+        "A": "==, !=",
+        "B": "is, not",
+        "C": "in, not in",
+        "D": "&, |"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 91,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1,2,3]\nx.insert(1, 9)\nprint(x)",
+      "options": {
+        "A": "[1,9,2,3]",
+        "B": "[9,1,2,3]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 92,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1,2,3]\nprint(x.pop(0))",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 93,
+      "question": "insert(1, \"A\") metodi nimani anglatadi?",
+      "code": null,
+      "options": {
+        "A": "List oxiriga \"A\" qo'shadi",
+        "B": "1-elementni o'chiradi",
+        "C": "1-indeksga \"A\" qo'shadi",
+        "D": "Listni teskari aylantiradi"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 94,
+      "question": "range(5) qanday sonlarni beradi?",
+      "code": null,
+      "options": {
+        "A": "1–5",
+        "B": "0–5",
+        "C": "0–4",
+        "D": "1,2,3,4,5"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 95,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = [1,2,3]\nprint(x[-1])",
+      "options": {
+        "A": "1",
+        "B": "2",
+        "C": "3",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 96,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(sorted([5,2,9]))",
+      "options": {
+        "A": "[5,2,9]",
+        "B": "[2,5,9]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 97,
+      "question": "Pythonda indentation nimani bildiradi?",
+      "code": null,
+      "options": {
+        "A": "Izoh",
+        "B": "Blok chegarasi",
+        "C": "O'zgaruvchi",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 98,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "print(divmod(9,4))",
+      "options": {
+        "A": "(2,1)",
+        "B": "(1,2)",
+        "C": "(2,2)",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 99,
+      "question": "Pythonda funksiyalarda *args nimani bildilari?",
+      "code": null,
+      "options": {
+        "A": "Keyword arguments",
+        "B": "Positional arguments tuple",
+        "C": "Dict",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 100,
+      "question": "Pythonda funksiyalarda **kwargs nimani bildilari?",
+      "code": null,
+      "options": {
+        "A": "Keyword arguments",
+        "B": "Positional arguments tuple",
+        "C": "Dict",
+        "D": "Error"
+      },
+      "correctAnswer": "A"
+    },
+    {
+      "id": 101,
+      "question": "Class ichida __init__ metodi vazifasi nima?",
+      "code": null,
+      "options": {
+        "A": "Klassni o'chirish",
+        "B": "Obyekt yaratilganda ishga tushadi",
+        "C": "Metodni yashirish",
+        "D": "Klassni meros olish"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 102,
+      "question": "Encapsulation nimani anglatadi?",
+      "code": null,
+      "options": {
+        "A": "Kodni tezlashtirish",
+        "B": "Ma'lumotlarni yashirish",
+        "C": "Meros olish",
+        "D": "Funksiya yaratish"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 103,
+      "question": "Quyidagi atribut qaysi biri private hisoblanadi?",
+      "code": null,
+      "options": {
+        "A": "_name",
+        "B": "__name",
+        "C": "Name",
+        "D": "int name"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 104,
+      "question": "Inheritance (vorislik) nima?",
+      "code": null,
+      "options": {
+        "A": "Funksiya chaqirish",
+        "B": "Klassdan klass yaratish",
+        "C": "O'zgaruvchi e'lon qilish",
+        "D": "Exception ushlash"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 105,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "class A:\n    def show(self):\n        print(\"A\")\n\nclass B(A):\n    pass\n\nobj = B()\nobj.show()",
+      "options": {
+        "A": "Xatolik",
+        "B": "A",
+        "C": "B",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 106,
+      "question": "try/except qachon ishlatiladi?",
+      "code": null,
+      "options": {
+        "A": "Sikl uchun",
+        "B": "Xatoliklarni boshqarish uchun",
+        "C": "Klass uchun",
+        "D": "Fayl ochish uchun"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 107,
+      "question": "finally bloki qachon bajariladi?",
+      "code": null,
+      "options": {
+        "A": "Faqat xatolik bo'lsa",
+        "B": "Har doim",
+        "C": "Faqat try bo'lsa",
+        "D": "Hech qachon"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 108,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print(\"Error\")",
+      "options": {
+        "A": "0",
+        "B": "Error",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 109,
+      "question": "raise operatori nima qiladi?",
+      "code": null,
+      "options": {
+        "A": "Xatoni yashiradi",
+        "B": "Xatoni majburiy chiqaradi",
+        "C": "Kodni to'xtatadi",
+        "D": "Funksiyani chaqiradi"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 110,
+      "question": "Polymorphism nima?",
+      "code": null,
+      "options": {
+        "A": "Bir nechta o'zgaruvchi",
+        "B": "Bir xil metod – turli xatti-harakat",
+        "C": "Meros olish",
+        "D": "Exception"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 111,
+      "question": "Faylni o'qish uchun qaysi rejim?",
+      "code": null,
+      "options": {
+        "A": "'w'",
+        "B": "'a'",
+        "C": "'r'",
+        "D": "'x'"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 112,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "f = open(\"test.txt\", \"w\")\nf.write(\"Hello\")\nf.close()",
+      "options": {
+        "A": "Faylni o'qiydi",
+        "B": "Faylga yozadi",
+        "C": "Faylni o'chiradi",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 113,
+      "question": "yield kalit so'zi qayerda ishlatiladi?",
+      "code": null,
+      "options": {
+        "A": "Klass",
+        "B": "Generator",
+        "C": "Exception",
+        "D": "Fayl"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 114,
+      "question": "Pythonda generatorlarning afzalligi?",
+      "code": null,
+      "options": {
+        "A": "Tezroq ishlaydi",
+        "B": "Kam xotira ishlatadi",
+        "C": "Immutable",
+        "D": "Private"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 115,
+      "question": "Lambda funksiyaga nima deb ta'rif berish mumkun?",
+      "code": null,
+      "options": {
+        "A": "Nomli funksiya",
+        "B": "Nomsiz funksiya",
+        "C": "Klass metodi",
+        "D": "Generator"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 116,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "list(map(lambda x: x*2, [1,2,3]))",
+      "options": {
+        "A": "[1,2,3]",
+        "B": "[2,4,6]",
+        "C": "Xatolik",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 117,
+      "question": "filter() funksiyasi nima qiladi?",
+      "code": null,
+      "options": {
+        "A": "O'zgartiradi",
+        "B": "Saralaydi (shart asosida)",
+        "C": "Qo'shadi",
+        "D": "O'chiradi"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 118,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "[x for x in range(4)]",
+      "options": {
+        "A": "[1,2,3,4]",
+        "B": "[0,1,2,3]",
+        "C": "(0,1,2,3)",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 119,
+      "question": "Dictionary comprehension qaysi?",
+      "code": null,
+      "options": {
+        "A": "[x for x in range(3)]",
+        "B": "{x: x*x for x in range(3)}",
+        "C": "(x for x in range(3))",
+        "D": "{1,2,3}"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 120,
+      "question": "global kalit so'zi nima uchun?",
+      "code": null,
+      "options": {
+        "A": "Funksiya yaratish",
+        "B": "Global o'zgaruvchini o'zgartirish",
+        "C": "Klass yaratish",
+        "D": "Sikl"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 121,
+      "question": "Python qaysi turdagi til hisoblanadi?",
+      "code": null,
+      "options": {
+        "A": "Kompilyatsiya qilinadigan",
+        "B": "Interpreted",
+        "C": "Assembly",
+        "D": "Markup"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 122,
+      "question": "Pythonda platformaga bog'liqlik qanday?",
+      "code": null,
+      "options": {
+        "A": "Faqat Windows",
+        "B": "Platform dependent",
+        "C": "Platform independent",
+        "D": "Faqat Linux"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 123,
+      "question": "Python kodlari qanday bajariladi?",
+      "code": null,
+      "options": {
+        "A": "Kompilyator orqali",
+        "B": "Interpreter orqali",
+        "C": "Browser orqali",
+        "D": "Kernel orqali"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 124,
+      "question": "Pythonda bloklar qanday ajratiladi?",
+      "code": null,
+      "options": {
+        "A": "{}",
+        "B": "()",
+        "C": "Indentation",
+        "D": ";"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 125,
+      "question": "Quyidagilardan qaysi biri to'g'ri syntax?",
+      "code": null,
+      "options": {
+        "A": "if x > 5 {}",
+        "B": "if (x > 5):",
+        "C": "if x > 5 then",
+        "D": "if x > 5 ;"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 126,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "list(range(1,6,2))",
+      "options": {
+        "A": "[1,2,3,4,5,6]",
+        "B": "[1,3,5]",
+        "C": "[2,4,6]",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 127,
+      "question": "List va array asosiy farqi?",
+      "code": null,
+      "options": {
+        "A": "Tip cheklovi yo'q",
+        "B": "Array bir xil tipli",
+        "C": "List tezroq",
+        "D": "Array immutable"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 128,
+      "question": "array('i',[1,2,3]) bu yerda 'i' nimani bildiradi?",
+      "code": null,
+      "options": {
+        "A": "index",
+        "B": "integer tipi",
+        "C": "iterable",
+        "D": "input"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 129,
+      "question": "Pythonda modul nima?",
+      "code": null,
+      "options": {
+        "A": "Klass",
+        "B": "Funksiya",
+        "C": "Kodlar fayli",
+        "D": "Kutubxona o'zi"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 130,
+      "question": "import math nima qiladi?",
+      "code": null,
+      "options": {
+        "A": "Modul yaratadi",
+        "B": "Modul yuklaydi",
+        "C": "Funksiya e'lon qiladi",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 131,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "datetime.now()",
+      "options": {
+        "A": "Faqat sana",
+        "B": "Sana + vaqt",
+        "C": "Faqat vaqt",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 132,
+      "question": "JSON string ni dict konvertatsiya qilish uchun qaysi funksiyadan foydalanamiz?",
+      "code": null,
+      "options": {
+        "A": "json.dump()",
+        "B": "json.load()",
+        "C": "json.loads()",
+        "D": "dict()"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 133,
+      "question": "Quyidagi JSON funksiyasini ishlatish bizga qanday natijani olib keladi?",
+      "code": "json.dumps(obj)",
+      "options": {
+        "A": "dict",
+        "B": "JSON string",
+        "C": "list",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 134,
+      "question": "except bloki qachon bajariladi?",
+      "code": null,
+      "options": {
+        "A": "Har doim",
+        "B": "Xatolik bo'lsa",
+        "C": "finally'dan keyin",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 135,
+      "question": "Quyidagilardan qaysi birida f-string to'gri ravishda qo'llangan?",
+      "code": null,
+      "options": {
+        "A": "\"%s\" % x",
+        "B": "f\"{x}\"",
+        "C": "\"{}\".format(x)",
+        "D": "print(x)"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 136,
+      "question": "Pythonda None qiymat nimani bildiradi?",
+      "code": null,
+      "options": {
+        "A": "0",
+        "B": "False",
+        "C": "Maxsus obyekt",
+        "D": "Bo'sh string"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 137,
+      "question": "Dunder methodlarda __str__ vazifasi nima?",
+      "code": null,
+      "options": {
+        "A": "Obyektni o'chirish",
+        "B": "Obyekt string ko'rinishini qaytarish",
+        "C": "Tipni aniqlash",
+        "D": "Xotira manzilini chiqarish"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 138,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "class A:\n    def __init__(self):\n        self.x = 5\n\n    def __str__(self):\n        return f\"A:{self.x}\"\n\nobj = A()\nprint(obj)",
+      "options": {
+        "A": "<object>",
+        "B": "A:5",
+        "C": "5",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 139,
+      "question": "Encapsulation ning maqsadi nima?",
+      "code": null,
+      "options": {
+        "A": "Kodni qisqartirish",
+        "B": "Ma'lumotni yashirish",
+        "C": "Klassni meros qilish",
+        "D": "Polymorphism"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 140,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "class Test:\n    def __init__(self):\n        self.__x = 10\n\nt = Test()\nprint(t.__x)",
+      "options": {
+        "A": "10",
+        "B": "None",
+        "C": "Error",
+        "D": "__x"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 141,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "class A:\n    def show(self):\n        print(\"A\")\n\nclass B(A):\n    def show(self):\n        print(\"B\")\n\nobj = B()\nobj.show()",
+      "options": {
+        "A": "A",
+        "B": "B",
+        "C": "Error",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 142,
+      "question": "Python Classlarda super() methodining vazifasi nima?",
+      "code": null,
+      "options": {
+        "A": "Klass yaratish",
+        "B": "Parent metodini chaqirish",
+        "C": "Private atribut ochish",
+        "D": "Xatolik"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 143,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "class A:\n    def calc(self):\n        return 1\n\nclass B(A):\n    def calc(self):\n        return 2\n\ndef f(obj):\n    print(obj.calc())\n\nf(A())\nf(B())",
+      "options": {
+        "A": "1 1",
+        "B": "2 2",
+        "C": "1 2",
+        "D": "Error"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 144,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "def gen():\n    yield 1\n    yield 2\n\ng = gen()\nprint(next(g))\nprint(next(g))",
+      "options": {
+        "A": "1 1",
+        "B": "1 2",
+        "C": "2 2",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 145,
+      "question": "Pythonda Decorator nima vazifa bajaradi?",
+      "code": null,
+      "options": {
+        "A": "Funksiya o'chiradi",
+        "B": "Funksiyani o'zgartiradi",
+        "C": "Klass yaratadi",
+        "D": "Sikl"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 146,
+      "question": "Quyida yozilgan decorator funksiyasining natijasi qaysi variantda to'g'ri berilgan?",
+      "code": "def deco(f):\n    def wrapper():\n        print(\"Start\")\n        f()\n        print(\"End\")\n    return wrapper\n@deco\ndef say():\n    print(\"Hello\")\n\nsay()",
+      "options": {
+        "A": "Hello",
+        "B": "Start → Hello → End",
+        "C": "Error",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 147,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "try:\n    raise ValueError(\"Xato\")\nexcept ValueError:\n    print(\"Handled\")",
+      "options": {
+        "A": "Xato",
+        "B": "Handled",
+        "C": "Error",
+        "D": "None"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 148,
+      "question": "Quyidagi kodning natijasini toping.",
+      "code": "x = 10\n\ndef f():\n    x = 5\n    print(x)\n\nf()\nprint(x)",
+      "options": {
+        "A": "10 10",
+        "B": "5 5",
+        "C": "5 10",
+        "D": "Error"
+      },
+      "correctAnswer": "C"
+    },
+    {
+      "id": 149,
+      "question": "Pythonda Deep copy bajarilganda....?",
+      "code": null,
+      "options": {
+        "A": "Havola yaratadi",
+        "B": "To'liq mustaqil nusxa ko'chiradi",
+        "C": "Error chiqadi",
+        "D": "O'zaruvchilar xotiradan ko'chirib olinadi"
+      },
+      "correctAnswer": "B"
+    },
+    {
+      "id": 150,
+      "question": "Pythonda continue operatorining vazifasi qanday?",
+      "code": null,
+      "options": {
+        "A": "Sikl tugatadi",
+        "B": "Keyingi iteratsiyaga o'tadi",
+        "C": "Funksiya tugaydi",
+        "D": "Error"
+      },
+      "correctAnswer": "B"
+    }
+  ]
+}
